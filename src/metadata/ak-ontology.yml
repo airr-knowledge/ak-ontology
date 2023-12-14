@@ -1,0 +1,28 @@
+# PURL configuration for http://purl.obolibrary.org/obo/ak-ontology
+
+idspace: AK-ONTOLOGY
+base_url: /obo/ak-ontology
+
+products:
+- ak-ontology.owl: https://raw.githubusercontent.com/airr-knowledge/ak-ontology/main/ak-ontology.owl
+- ak-ontology.obo: https://raw.githubusercontent.com/airr-knowledge/ak-ontology/main/ak-ontology.obo
+
+term_browser: ontobee
+example_terms:
+- AK-ONTOLOGY_0000000
+
+entries:
+
+- prefix: /releases/
+  replacement: https://raw.githubusercontent.com/airr-knowledge/ak-ontology/v
+
+- prefix: /tracker/
+  replacement: https://github.com/airr-knowledge/ak-ontology/issues
+
+- prefix: /about/
+  replacement: http://www.ontobee.org/ontology/AK-ONTOLOGY?iri=http://purl.obolibrary.org/obo/
+
+## generic fall-through, serve direct from github by default
+- prefix: /
+  replacement: https://raw.githubusercontent.com/airr-knowledge/ak-ontology/main/
+

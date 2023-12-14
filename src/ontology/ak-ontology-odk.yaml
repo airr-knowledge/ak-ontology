@@ -1,0 +1,10 @@
+id: ak-ontology
+title: AIRR Knowledge project ontology
+github_org: airr-knowledge
+repo: ak-ontology
+import_group:
+  products:
+    - id: doid
+    - id: uo
+    - id: uberon
+allow_equivalents: all
