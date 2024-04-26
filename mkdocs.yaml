@@ -1,22 +1,5 @@
 site_name: AIRR Knowledge project ontology
-theme:
-  name: material
-  features:
-    - content.tabs.link
-plugins:
-  - search
-  - table-reader
-markdown_extensions:
-  - pymdownx.highlight:
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
-  - pymdownx.superfences
-  - pymdownx.tabbed:
-  - pymdownx.critic
-  - pymdownx.caret
-  - pymdownx.keys
-  - pymdownx.mark
-  - pymdownx.tilde
+theme: readthedocs
 
 site_url: https://airr-knowledge.github.io/ak-ontology/
 repo_url: https://github.com/airr-knowledge/ak-ontology/
