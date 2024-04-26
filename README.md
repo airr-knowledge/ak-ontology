@@ -21,6 +21,11 @@ Use the docker container to have a consistent development environment.
 docker pull obolibrary/odkfull
 docker run -v $PWD:/work -it obolibrary/odkfull bash
 cd /work/src/ontology
+
+# if ak-ontology-odk.yaml is updated, then
+make update_repo
+
+# build everything
 make
 ```
 

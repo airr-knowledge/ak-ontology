@@ -4,7 +4,27 @@ github_org: airr-knowledge
 repo: ak-ontology
 import_group:
   products:
-    - id: doid
-    - id: uo
-    - id: uberon
+    - id: APOLLO_SV
+    - id: BFO
+    - id: CL
+    - id: DOID
+    - id: EXO
+# out of memory
+#    - id: GAZ
+    - id: IAO
+#    - id: NCBITaxon
+#    - id: NCIT
+    - id: OBI
+    - id: OGMS
+    - id: OMRSE
+    - id: PATO
+    - id: RO
+    - id: SBO
+    - id: UBERON
+    - id: UO
+    - id: VO
+# how to incorporate?
+#    - id: ONTIE
+
 allow_equivalents: all
+robot_java_args: '-Xmx8G'
