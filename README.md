@@ -6,6 +6,26 @@ Description: None
 
 More information can be found at http://obofoundry.org/ontology/ak-ontology
 
+## Development setup
+
+Setup the local source code.
+
+```
+git clone https://github.com/airr-knowledge/ak-ontology.git
+cd ak-ontology
+```
+
+Use the docker container to have a consistent development environment.
+
+```
+docker pull obolibrary/odkfull
+docker run -v $PWD:/work -it obolibrary/odkfull bash
+cd /work/src/ontology
+make
+```
+
+Perform git operations outside of docker to avoid permission and gitconfig issues.
+
 ## Versions
 
 ### Stable release versions
