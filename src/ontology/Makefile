@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                5b1113afac18a8d2abd00637390cb6978d3b70b56bdbb42ecb59733149efe8e5
+CONFIG_HASH=                cb55f5517ddc27cf3492c90c763c988f9744f4f79ed170e5682649ffba65cbb3
 
 
 # ----------------------------------------
@@ -159,7 +159,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  APOLLO_SV BFO CL DOID EXO IAO OBI OGMS OMRSE PATO RO SBO UBERON UO VO
+IMPORTS =  APOLLO_SV BFO CL DOID EXO GAZ IAO OBI OGMS OMRSE PATO RO SBO UBERON UO VO
 
 IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -436,6 +436,14 @@ mirror-EXO: | $(TMPDIR)
 	$(ROBOT) convert -i $(TMPDIR)/EXO-download.owl -o $(TMPDIR)/$@.owl
 
 
+## ONTOLOGY: GAZ
+.PHONY: mirror-GAZ
+.PRECIOUS: $(MIRRORDIR)/GAZ.owl
+mirror-GAZ: | $(TMPDIR)
+	curl -L $(OBOBASE)/GAZ.owl --create-dirs -o $(TMPDIR)/GAZ-download.owl --retry 4 --max-time 200 && \
+	$(ROBOT) convert -i $(TMPDIR)/GAZ-download.owl -o $(TMPDIR)/$@.owl
+
+
 ## ONTOLOGY: IAO
 .PHONY: mirror-IAO
 .PRECIOUS: $(MIRRORDIR)/IAO.owl
@@ -660,6 +668,8 @@ update_repo:
 	sh $(SCRIPTSDIR)/update_repo.sh
 	
 
+update_docs:
+	mkdocs gh-deploy --config-file ../../mkdocs.yaml
 
 # Note to future generations: computing the real path relative to the
 # current directory is a way to ensure we only clean up directories that

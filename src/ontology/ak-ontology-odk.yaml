@@ -9,9 +9,9 @@ import_group:
     - id: CL
     - id: DOID
     - id: EXO
-# out of memory
-#    - id: GAZ
+    - id: GAZ
     - id: IAO
+# out of memory
 #    - id: NCBITaxon
 #    - id: NCIT
     - id: OBI
@@ -27,4 +27,7 @@ import_group:
 #    - id: ONTIE
 
 allow_equivalents: all
-robot_java_args: '-Xmx8G'
+robot_java_args: '-Xmx16G'
+
+documentation:
+  documentation_system: mkdocs

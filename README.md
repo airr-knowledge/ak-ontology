@@ -15,18 +15,18 @@ git clone https://github.com/airr-knowledge/ak-ontology.git
 cd ak-ontology
 ```
 
-Use the docker container to have a consistent development environment.
+Use the ODK docker container to have a consistent development environment. There is
+a provided `run.sh` script that runs the docker in an appropriate way.
 
 ```
 docker pull obolibrary/odkfull
-docker run -v $PWD:/work -it obolibrary/odkfull bash
-cd /work/src/ontology
+cd src/ontology
 
 # if ak-ontology-odk.yaml is updated, then
-make update_repo
+sh run.sh make update_repo
 
 # build everything
-make
+sh run.sh make
 ```
 
 Perform git operations outside of docker to avoid permission and gitconfig issues.
