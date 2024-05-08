@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                cb55f5517ddc27cf3492c90c763c988f9744f4f79ed170e5682649ffba65cbb3
+CONFIG_HASH=                c5596cc39343fc285788f852df4a7a65f13e14a0bd0a26aea49d122c0fc83d3a
 
 
 # ----------------------------------------
@@ -364,6 +364,14 @@ $(IMPORTDIR)/%_import.owl: $(MIRRORDIR)/%.owl $(IMPORTDIR)/%_terms_combined.txt
 
 .PRECIOUS: $(IMPORTDIR)/%_import.owl
 
+## Module for ontology: CL
+
+$(IMPORTDIR)/CL_import.owl: $(MIRRORDIR)/CL.owl $(IMPORTDIR)/CL_terms_combined.txt
+	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
+		extract -T $(IMPORTDIR)/CL_terms_combined.txt --copy-ontology-annotations true --force true --individuals include --method TOP \
+		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
+		$(ANNOTATE_CONVERT_FILE); fi
+
 
 .PHONY: refresh-imports
 refresh-imports:
@@ -416,7 +424,7 @@ mirror-BFO: | $(TMPDIR)
 .PHONY: mirror-CL
 .PRECIOUS: $(MIRRORDIR)/CL.owl
 mirror-CL: | $(TMPDIR)
-	curl -L $(OBOBASE)/CL.owl --create-dirs -o $(TMPDIR)/CL-download.owl --retry 4 --max-time 200 && \
+	curl -L $(OBOBASE)/CL/CL-base.owl --create-dirs -o $(TMPDIR)/CL-download.owl --retry 4 --max-time 200 && \
 	$(ROBOT) convert -i $(TMPDIR)/CL-download.owl -o $(TMPDIR)/$@.owl
 
 
