@@ -9,8 +9,8 @@ import_group:
     - id: CL
     - id: DOID
     - id: EXO
-#    - id: GAZ
-#      is_large: TRUE
+    - id: GAZ
+      is_large: TRUE
     - id: IAO
 #    - id: NCBITaxon
 #      is_large: TRUE

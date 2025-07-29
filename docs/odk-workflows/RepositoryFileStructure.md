@@ -21,6 +21,7 @@ These are the current imports in AK-ONTOLOGY
 | CL | http://purl.obolibrary.org/obo/CL.owl | None |
 | DOID | http://purl.obolibrary.org/obo/DOID.owl | None |
 | EXO | http://purl.obolibrary.org/obo/EXO.owl | None |
+| GAZ | http://purl.obolibrary.org/obo/GAZ.owl | None |
 | IAO | http://purl.obolibrary.org/obo/IAO.owl | None |
 | OBI | http://purl.obolibrary.org/obo/OBI.owl | None |
 | OGMS | http://purl.obolibrary.org/obo/OGMS.owl | None |

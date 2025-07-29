@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                cdc9b63b8b8955e2b712546db4b77127d976453f51db8b288c6c5790c1404ac5
+CONFIG_HASH=                39068016a7a3bd9ee8180df6a20ff316731d4d5dca9057f0ff91b48fdd6cf9de
 
 
 # ----------------------------------------
@@ -159,7 +159,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  APOLLO_SV BFO CL DOID EXO IAO OBI OGMS OMRSE PATO RO SBO UBERON UO VO
+IMPORTS =  APOLLO_SV BFO CL DOID EXO GAZ IAO OBI OGMS OMRSE PATO RO SBO UBERON UO VO
 
 IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -364,6 +364,13 @@ $(IMPORTDIR)/%_import.owl: $(MIRRORDIR)/%.owl $(IMPORTDIR)/%_terms_combined.txt
 
 .PRECIOUS: $(IMPORTDIR)/%_import.owl
 
+## Module for ontology: GAZ
+
+$(IMPORTDIR)/GAZ_import.owl: $(MIRRORDIR)/GAZ.owl $(IMPORTDIR)/GAZ_terms_combined.txt
+	if [ $(IMP) = true ] && [ $(IMP_LARGE) = true ]; then $(ROBOT) extract -i $< -T $(IMPORTDIR)/GAZ_terms_combined.txt --force true  --copy-ontology-annotations true --individuals include --method BOT \
+		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
+		$(ANNOTATE_CONVERT_FILE); fi
+
 
 .PHONY: refresh-imports
 refresh-imports:
@@ -434,6 +441,19 @@ mirror-DOID: | $(TMPDIR)
 mirror-EXO: | $(TMPDIR)
 	curl -L $(OBOBASE)/EXO.owl --create-dirs -o $(TMPDIR)/EXO-download.owl --retry 4 --max-time 200 && \
 	$(ROBOT) convert -i $(TMPDIR)/EXO-download.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: GAZ
+.PHONY: mirror-GAZ
+.PRECIOUS: $(MIRRORDIR)/GAZ.owl
+ifeq ($(strip $(IMP_LARGE)),true)
+mirror-GAZ: | $(TMPDIR)
+	curl -L $(OBOBASE)/GAZ.owl --create-dirs -o $(TMPDIR)/GAZ-download.owl --retry 4 --max-time 200 && \
+	$(ROBOT) convert -i $(TMPDIR)/GAZ-download.owl -o $(TMPDIR)/$@.owl
+else
+mirror-GAZ:
+	@echo "Not refreshing GAZ because refreshing large imports is disabled (IMP_LARGE=$(IMP_LARGE))."
+endif
 
 
 ## ONTOLOGY: IAO
