@@ -14,7 +14,7 @@ mkdir target
 /tools/odk.py seed -c -g -C $CONFIG
 ls -l target/$OID/src
 ls -l $SRCDIR/
-cp target/$OID/src/scripts/update_repo.sh $SRCDIR/scripts/
+#cp target/$OID/src/scripts/update_repo.sh $SRCDIR/scripts/
 rsync -r -u --ignore-existing --exclude 'patterns/data/default/example.tsv' --exclude 'patterns/dosdp-patterns/example.yaml' target/$OID/src/ $SRCDIR/
 
 rsync -r -u --ignore-existing target/$OID/docs/ $ROOTDIR/docs
@@ -30,10 +30,16 @@ cp target/$OID/.github/workflows/qc.yml $ROOTDIR/.github/workflows/qc.yml
 
 
 
-cp target/$OID/.github/workflows/docs.yml $ROOTDIR/.github/workflows/docs.yml
+#cp target/$OID/.github/workflows/docs.yml $ROOTDIR/.github/workflows/docs.yml
 
 
 cp -n target/$OID/mkdocs.yaml $ROOTDIR/
+
+echo ""
+
+echo "WARNING: The update_repo.sh was not updated, manually migrate if necessary"
+
+echo "WARNING: The docs github workflow was not updated, manually migrate if necessary"
 
 echo "WARNING: These files should be manually migrated: mkdocs.yaml, .gitignore, src/ontology/catalog.xml (if you added a new import or component)"
 

@@ -7,8 +7,8 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/ak-ontology/imports/SBO_import.owl>
-<http://purl.obolibrary.org/obo/ak-ontology/releases/2024-04-26/imports/SBO_import.owl>
-Annotation(owl:versionInfo "2024-04-26")
+<http://purl.obolibrary.org/obo/ak-ontology/releases/2025-07-29/imports/SBO_import.owl>
+Annotation(owl:versionInfo "2025-07-29")
 
 
 
