@@ -9,11 +9,11 @@ import_group:
     - id: CL
     - id: DOID
     - id: EXO
-    - id: GAZ
+#    - id: GAZ
+#      is_large: TRUE
     - id: IAO
-# out of memory
 #    - id: NCBITaxon
-#    - id: NCIT
+#      is_large: TRUE
     - id: OBI
     - id: OGMS
     - id: OMRSE
