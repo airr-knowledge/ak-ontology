@@ -1,1 +1,1 @@
-CL:0000084 # T cell
+CL:0000542 # lymphocyte
