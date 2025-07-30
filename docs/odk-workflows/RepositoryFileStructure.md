@@ -19,7 +19,7 @@ These are the current imports in AK-ONTOLOGY
 | APOLLO_SV | http://purl.obolibrary.org/obo/APOLLO_SV.owl | None |
 | BFO | http://purl.obolibrary.org/obo/BFO.owl | None |
 | CL | http://purl.obolibrary.org/obo/CL.owl | slme |
-| DOID | http://purl.obolibrary.org/obo/DOID.owl | None |
+| DOID | http://purl.obolibrary.org/obo/DOID.owl | slme |
 | EXO | http://purl.obolibrary.org/obo/EXO.owl | None |
 | GAZ | http://purl.obolibrary.org/obo/GAZ.owl | None |
 | IAO | http://purl.obolibrary.org/obo/IAO.owl | None |

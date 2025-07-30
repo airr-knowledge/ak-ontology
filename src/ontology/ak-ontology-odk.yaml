@@ -11,6 +11,8 @@ import_group:
       module_type_slme: TOP
       use_base: TRUE
     - id: DOID
+      module_type: slme
+      module_type_slme: TOP
     - id: EXO
     - id: GAZ
       is_large: TRUE
