@@ -57,7 +57,6 @@ Declaration(Class(<http://purl.obolibrary.org/obo/UO_0000042>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UO_0000043>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UO_0000044>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UO_0000045>))
-Declaration(Class(<http://purl.obolibrary.org/obo/UO_0000046>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UO_0000047>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UO_0000048>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UO_0000049>))
@@ -285,6 +284,9 @@ Declaration(Class(<http://purl.obolibrary.org/obo/UO_0000272>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UO_0000273>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UO_0000274>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UO_0000275>))
+Declaration(Class(<http://purl.obolibrary.org/obo/UO_0000276>))
+Declaration(Class(<http://purl.obolibrary.org/obo/UO_0000277>))
+Declaration(Class(<http://purl.obolibrary.org/obo/UO_0000278>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UO_0000279>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UO_0000280>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UO_0000281>))
@@ -312,16 +314,31 @@ Declaration(Class(<http://purl.obolibrary.org/obo/UO_0000311>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UO_0000312>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UO_0000313>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UO_0000314>))
+Declaration(Class(<http://purl.obolibrary.org/obo/UO_0000315>))
+Declaration(Class(<http://purl.obolibrary.org/obo/UO_0000316>))
+Declaration(Class(<http://purl.obolibrary.org/obo/UO_0000317>))
+Declaration(Class(<http://purl.obolibrary.org/obo/UO_0000318>))
+Declaration(Class(<http://purl.obolibrary.org/obo/UO_0000319>))
+Declaration(Class(<http://purl.obolibrary.org/obo/UO_0000320>))
+Declaration(Class(<http://purl.obolibrary.org/obo/UO_0000321>))
+Declaration(Class(<http://purl.obolibrary.org/obo/UO_0000322>))
+Declaration(Class(<http://purl.obolibrary.org/obo/UO_0000323>))
+Declaration(Class(<http://purl.obolibrary.org/obo/UO_0000324>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UO_0000325>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UO_0000326>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UO_0000327>))
+Declaration(Class(<http://purl.obolibrary.org/obo/UO_0000328>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UO_0000329>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UO_0000330>))
+Declaration(Class(<http://purl.obolibrary.org/obo/UO_0000331>))
+Declaration(Class(<http://purl.obolibrary.org/obo/UO_0000332>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UO_0010001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UO_0010002>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UO_0010003>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UO_0010004>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UO_0010005>))
+Declaration(Class(<http://purl.obolibrary.org/obo/UO_0010006>))
+Declaration(Class(<http://purl.obolibrary.org/obo/UO_0010007>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UO_0010008>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UO_0010009>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UO_0010010>))
@@ -355,10 +372,18 @@ Declaration(Class(<http://purl.obolibrary.org/obo/UO_0010037>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UO_0010038>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UO_0010039>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UO_0010040>))
+Declaration(Class(<http://purl.obolibrary.org/obo/UO_0010041>))
+Declaration(Class(<http://purl.obolibrary.org/obo/UO_0010042>))
+Declaration(Class(<http://purl.obolibrary.org/obo/UO_0010043>))
+Declaration(Class(<http://purl.obolibrary.org/obo/UO_0010044>))
+Declaration(Class(<http://purl.obolibrary.org/obo/UO_0010045>))
+Declaration(Class(<http://purl.obolibrary.org/obo/UO_0010046>))
+Declaration(Class(<http://purl.obolibrary.org/obo/UO_0010047>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UO_0010048>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UO_0010049>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UO_0010050>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UO_0010051>))
+Declaration(Class(<http://purl.obolibrary.org/obo/UO_0010052>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UO_0010053>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UO_0010054>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UO_0010055>))
@@ -375,6 +400,14 @@ Declaration(Class(<http://purl.obolibrary.org/obo/UO_0010065>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UO_0010066>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UO_0010067>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UO_0010068>))
+Declaration(Class(<http://purl.obolibrary.org/obo/UO_0010070>))
+Declaration(Class(<http://purl.obolibrary.org/obo/UO_0010072>))
+Declaration(Class(<http://purl.obolibrary.org/obo/UO_0010073>))
+Declaration(Class(<http://purl.obolibrary.org/obo/UO_0010074>))
+Declaration(Class(<http://purl.obolibrary.org/obo/UO_0010075>))
+Declaration(Class(<http://purl.obolibrary.org/obo/UO_0010076>))
+Declaration(Class(<http://purl.obolibrary.org/obo/UO_0010077>))
+Declaration(Class(<http://purl.obolibrary.org/obo/UO_0010080>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UO_1000008>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UO_1000010>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UO_1000011>))
@@ -1230,10 +1263,6 @@ SubClassOf(<http://purl.obolibrary.org/obo/UO_0000044> ObjectSomeValuesFrom(<htt
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/UO_0000045> "\"A unit which is one of a particular measure to which all measures of that type can be related.\" [NIST:NIST]")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/UO_0000045> "base unit")
 SubClassOf(<http://purl.obolibrary.org/obo/UO_0000045> <http://purl.obolibrary.org/obo/UO_0000000>)
-
-# Class: <http://purl.obolibrary.org/obo/UO_0000046> (prefix)
-
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/UO_0000046> "prefix")
 
 # Class: <http://purl.obolibrary.org/obo/UO_0000047> (area unit)
 
@@ -3083,6 +3112,24 @@ EquivalentClasses(<http://purl.obolibrary.org/obo/UO_0000275> ObjectOneOf(<http:
 SubClassOf(<http://purl.obolibrary.org/obo/UO_0000275> <http://purl.obolibrary.org/obo/UO_1000173>)
 SubClassOf(<http://purl.obolibrary.org/obo/UO_0000275> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/has_prefix> <http://purl.obolibrary.org/obo/UO_0000300>))
 
+# Class: <http://purl.obolibrary.org/obo/UO_0000276> (amount per container)
+
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/UO_0000276> "\"A concentration unit which is a standard measure of the amount of a substance in a given container.\" [UOC:GVG]")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/UO_0000276> "amount per container")
+SubClassOf(<http://purl.obolibrary.org/obo/UO_0000276> <http://purl.obolibrary.org/obo/UO_0000051>)
+
+# Class: <http://purl.obolibrary.org/obo/UO_0000277> (ug/disk)
+
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/UO_0000277> "\"A unit which is equal to one microgram per disk, where a disk is some physical surface/container upon which the substance is deposited.\" [UOC:MD]")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/UO_0000277> "ug/disk")
+SubClassOf(<http://purl.obolibrary.org/obo/UO_0000277> <http://purl.obolibrary.org/obo/UO_0000276>)
+
+# Class: <http://purl.obolibrary.org/obo/UO_0000278> (nmole/disk)
+
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/UO_0000278> "\"A unit which is equal to one nanomole per disk, where a disk is some physical surface/container upon which the substance is deposited.\" [UOC:MD]")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/UO_0000278> "nmole/disk")
+SubClassOf(<http://purl.obolibrary.org/obo/UO_0000278> <http://purl.obolibrary.org/obo/UO_0000276>)
+
 # Class: <http://purl.obolibrary.org/obo/UO_0000279> (milliunits per milliliter)
 
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/UO_0000279> "mU/ml")
@@ -3145,7 +3192,6 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/UO_0000292> "G")
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/UO_0000292> "\"A prefix in the metric system denoting a factor of ten to the power of 9.\" [UO:GVG]")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/UO_0000292> "giga")
-SubClassOf(<http://purl.obolibrary.org/obo/UO_0000292> <http://purl.obolibrary.org/obo/UO_0000046>)
 
 # Class: <http://purl.obolibrary.org/obo/UO_0000293> (mega)
 
@@ -3153,7 +3199,6 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/UO_0000293> "M")
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/UO_0000293> "\"A prefix in the metric system denoting a factor of million.\" [UO:GVG]")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/UO_0000293> "mega")
-SubClassOf(<http://purl.obolibrary.org/obo/UO_0000293> <http://purl.obolibrary.org/obo/UO_0000046>)
 
 # Class: <http://purl.obolibrary.org/obo/UO_0000294> (kilo)
 
@@ -3161,7 +3206,6 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/UO_0000294> "k")
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/UO_0000294> "\"A prefix in the metric system denoting a factor of one thousand.\" [UO:GVG]")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/UO_0000294> "kilo")
-SubClassOf(<http://purl.obolibrary.org/obo/UO_0000294> <http://purl.obolibrary.org/obo/UO_0000046>)
 
 # Class: <http://purl.obolibrary.org/obo/UO_0000296> (deci)
 
@@ -3169,7 +3213,6 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/UO_0000296> "d")
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/UO_0000296> "\"A prefix in the metric system denoting a factor of one tenth.\" [UO:GVG]")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/UO_0000296> "deci")
-SubClassOf(<http://purl.obolibrary.org/obo/UO_0000296> <http://purl.obolibrary.org/obo/UO_0000046>)
 
 # Class: <http://purl.obolibrary.org/obo/UO_0000297> (milli)
 
@@ -3177,7 +3220,6 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/UO_0000297> "m")
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/UO_0000297> "\"A prefix in the metric system denoting a factor of one thousand.\" [UO:GVG]")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/UO_0000297> "milli")
-SubClassOf(<http://purl.obolibrary.org/obo/UO_0000297> <http://purl.obolibrary.org/obo/UO_0000046>)
 
 # Class: <http://purl.obolibrary.org/obo/UO_0000298> (centi)
 
@@ -3185,14 +3227,12 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/UO_0000298> "c")
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/UO_0000298> "\"A prefix in the metric system denoting a factor of one hundred.\" [UO:GVG]")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/UO_0000298> "centi")
-SubClassOf(<http://purl.obolibrary.org/obo/UO_0000298> <http://purl.obolibrary.org/obo/UO_0000046>)
 
 # Class: <http://purl.obolibrary.org/obo/UO_0000299> (micro)
 
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/UO_0000299> "10^[-6]")
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/UO_0000299> "\"A prefix in the metric system denoting a factor of 10 to the power of -6.\" [UO:GVG]")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/UO_0000299> "micro")
-SubClassOf(<http://purl.obolibrary.org/obo/UO_0000299> <http://purl.obolibrary.org/obo/UO_0000046>)
 
 # Class: <http://purl.obolibrary.org/obo/UO_0000300> (nano)
 
@@ -3200,7 +3240,6 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/UO_0000300> "n")
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/UO_0000300> "\"A prefix in the metric system denoting a factor of 10 to the power of -9.\" [UO:GVG]")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/UO_0000300> "nano")
-SubClassOf(<http://purl.obolibrary.org/obo/UO_0000300> <http://purl.obolibrary.org/obo/UO_0000046>)
 
 # Class: <http://purl.obolibrary.org/obo/UO_0000301> (microgram per liter)
 
@@ -3219,7 +3258,6 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/UO_0000302> "n")
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/UO_0000302> "\"A prefix in the metric system denoting a factor of 10 to the power of -12.\" [GVG:UO]")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/UO_0000302> "pico")
-SubClassOf(<http://purl.obolibrary.org/obo/UO_0000302> <http://purl.obolibrary.org/obo/UO_0000046>)
 
 # Class: <http://purl.obolibrary.org/obo/UO_0000303> (femto)
 
@@ -3227,7 +3265,6 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/UO_0000303> "f")
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/UO_0000303> "\"A prefix in the metric system denoting a factor of 10 to the power of -15.\" [UO:GVG]")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/UO_0000303> "femto")
-SubClassOf(<http://purl.obolibrary.org/obo/UO_0000303> <http://purl.obolibrary.org/obo/UO_0000046>)
 
 # Class: <http://purl.obolibrary.org/obo/UO_0000304> (atto)
 
@@ -3235,7 +3272,6 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/UO_0000304> "10^[-18]")
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/UO_0000304> "\"A prefix in the metric system denoting a factor of 10 to the power of -18.\" [UO:GVG]")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/UO_0000304> "atto")
-SubClassOf(<http://purl.obolibrary.org/obo/UO_0000304> <http://purl.obolibrary.org/obo/UO_0000046>)
 
 # Class: <http://purl.obolibrary.org/obo/UO_0000307> (dose unit)
 
@@ -3295,6 +3331,72 @@ AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/UO_0000314> "rela
 EquivalentClasses(<http://purl.obolibrary.org/obo/UO_0000314> ObjectOneOf(<http://purl.obolibrary.org/obo/UO_0000314>))
 SubClassOf(<http://purl.obolibrary.org/obo/UO_0000314> <http://purl.obolibrary.org/obo/UO_1000314>)
 
+# Class: <http://purl.obolibrary.org/obo/UO_0000315> (turbidity unit)
+
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/UO_0000315> "\"A unit used to indicate the clarity of water or other solutions or suspensions, as measured by the ability of the solution or suspension to scatter light of a defined wavelength range.\" [UO:PC]")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/UO_0000315> "turbidity unit")
+SubClassOf(<http://purl.obolibrary.org/obo/UO_0000315> <http://purl.obolibrary.org/obo/UO_0000000>)
+
+# Class: <http://purl.obolibrary.org/obo/UO_0000316> (cells per microliter)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/UO_0000316> "cells per microlitre")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/UO_0000316> "cells per ul")
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/UO_0000316> "\"A unit of cell concentration which is equal to one cell in a volume of 1 microliter.\" [UO:GVG]")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/UO_0000316> "cells per microliter")
+SubClassOf(<http://purl.obolibrary.org/obo/UO_0000316> <http://purl.obolibrary.org/obo/UO_0000200>)
+
+# Class: <http://purl.obolibrary.org/obo/UO_0000317> (cells per well)
+
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/UO_0000317> "\"A unit of cell concentration which is equal to 1 cell in a well or discrete container of arbitrary volume.\" [UO:PC]")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/UO_0000317> "cells per well")
+SubClassOf(<http://purl.obolibrary.org/obo/UO_0000317> <http://purl.obolibrary.org/obo/UO_0000200>)
+
+# Class: <http://purl.obolibrary.org/obo/UO_0000318> (formazin nephelometric unit)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/UO_0000318> "FNU")
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/UO_0000318> "\"1000 formazin turbidity units (FNU) on the empirical formazin turbidity scale represents reflectance of insol. reaction products of 0.0725 g hydrazine sulfate with 0.7250 g hexamethylenetetramine diluted to 1 L.\" [AOAC:192]")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/UO_0000318> "formazin nephelometric unit")
+SubClassOf(<http://purl.obolibrary.org/obo/UO_0000318> <http://purl.obolibrary.org/obo/UO_0000315>)
+
+# Class: <http://purl.obolibrary.org/obo/UO_0000319> (radioactivity concentration)
+
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/UO_0000319> "\"A concentration unit which is a standard measure of the amount of radioactivity in a given volume.\" [UO:GVG]")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/UO_0000319> "radioactivity concentration")
+SubClassOf(<http://purl.obolibrary.org/obo/UO_0000319> <http://purl.obolibrary.org/obo/UO_0000051>)
+
+# Class: <http://purl.obolibrary.org/obo/UO_0000320> (curie per liter)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/UO_0000320> "curie per litre")
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/UO_0000320> "\"A unit of radioactivity concentration which is equal to one curie in a volume of 1 liter.\" [UO:GVG]")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/UO_0000320> "curie per liter")
+SubClassOf(<http://purl.obolibrary.org/obo/UO_0000320> <http://purl.obolibrary.org/obo/UO_0000319>)
+
+# Class: <http://purl.obolibrary.org/obo/UO_0000321> (microcurie per milliliter)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/UO_0000321> "microcurie per millilitre")
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/UO_0000321> "\"A unit of radioactivity concentration which is equal to one micro curie in a volume of 1 liter.\" [UO:GVG]")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/UO_0000321> "microcurie per milliliter")
+SubClassOf(<http://purl.obolibrary.org/obo/UO_0000321> <http://purl.obolibrary.org/obo/UO_0000319>)
+
+# Class: <http://purl.obolibrary.org/obo/UO_0000322> (fold dilution)
+
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/UO_0000322> "\"A unit that is the ratio of concentration of two solutions of interest, typically with one solution derived from the other by the addition of solvent.\" [UO:PC]")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/UO_0000322> "fold dilution")
+SubClassOf(<http://purl.obolibrary.org/obo/UO_0000322> <http://purl.obolibrary.org/obo/UO_0000186>)
+
+# Class: <http://purl.obolibrary.org/obo/UO_0000323> (ton per hectare)
+
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/UO_0000323> "\"An area density unit which is equal to the mass of an object in tons divided by the surface area in hectares.\" [UO:GVG]")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/UO_0000323> "ton per hectare")
+SubClassOf(<http://purl.obolibrary.org/obo/UO_0000323> <http://purl.obolibrary.org/obo/UO_0000054>)
+
+# Class: <http://purl.obolibrary.org/obo/UO_0000324> (square angstrom)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/UO_0000324> "A^[2]")
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/UO_0000324> "\"An area unit which is equal to an area enclosed by a square with sides each 1 angstrom long.\" [UOC:GVG]")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/UO_0000324> "square angstrom")
+SubClassOf(<http://purl.obolibrary.org/obo/UO_0000324> <http://purl.obolibrary.org/obo/UO_0000047>)
+
 # Class: <http://purl.obolibrary.org/obo/UO_0000325> (megaHertz)
 
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/UO_0000325> "mH")
@@ -3320,6 +3422,14 @@ AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/UO_0000327> "cent
 EquivalentClasses(<http://purl.obolibrary.org/obo/UO_0000327> ObjectOneOf(<http://purl.obolibrary.org/obo/UO_0000327>))
 SubClassOf(<http://purl.obolibrary.org/obo/UO_0000327> <http://purl.obolibrary.org/obo/UO_0000001>)
 
+# Class: <http://purl.obolibrary.org/obo/UO_0000328> (kilo base pair)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/UO_0000328> "kbp")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/UO_0000328> "kilobasepair")
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/UO_0000328> "\"A unit equal to one thousand base pairs.\" [UOC:GVG]")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/UO_0000328> "kilo base pair")
+SubClassOf(<http://purl.obolibrary.org/obo/UO_0000328> <http://purl.obolibrary.org/obo/UO_0000244>)
+
 # Class: <http://purl.obolibrary.org/obo/UO_0000329> (mega base pair)
 
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/UO_0000329> "Mb")
@@ -3341,6 +3451,20 @@ EquivalentClasses(<http://purl.obolibrary.org/obo/UO_0000330> ObjectIntersection
 EquivalentClasses(<http://purl.obolibrary.org/obo/UO_0000330> ObjectOneOf(<http://purl.obolibrary.org/obo/UO_0000330>))
 SubClassOf(<http://purl.obolibrary.org/obo/UO_0000330> <http://purl.obolibrary.org/obo/UO_0000244>)
 SubClassOf(<http://purl.obolibrary.org/obo/UO_0000330> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/has_prefix> <http://purl.obolibrary.org/obo/UO_0000292>))
+
+# Class: <http://purl.obolibrary.org/obo/UO_0000331> (gigabyte)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/UO_0000331> "GB")
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/UO_0000331> "\"An information unit which is equal to 1000000000 bytes.\" [UO:GVG]")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/UO_0000331> "gigabyte")
+SubClassOf(<http://purl.obolibrary.org/obo/UO_0000331> <http://purl.obolibrary.org/obo/UO_0000231>)
+
+# Class: <http://purl.obolibrary.org/obo/UO_0000332> (terabyte)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/UO_0000332> "TB")
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/UO_0000332> "\"An information unit which is equal to 1000 gigabytes.\" [UO:GVG]")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/UO_0000332> "terabyte")
+SubClassOf(<http://purl.obolibrary.org/obo/UO_0000332> <http://purl.obolibrary.org/obo/UO_0000231>)
 
 # Class: <http://purl.obolibrary.org/obo/UO_0010001> (square micrometer)
 
@@ -3381,6 +3505,20 @@ AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/UO_0010005> "\"
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/UO_0010005> "millimeters per day")
 EquivalentClasses(<http://purl.obolibrary.org/obo/UO_0010005> ObjectOneOf(<http://purl.obolibrary.org/obo/UO_0010005>))
 SubClassOf(<http://purl.obolibrary.org/obo/UO_0010005> <http://purl.obolibrary.org/obo/UO_0000060>)
+
+# Class: <http://purl.obolibrary.org/obo/UO_0010006> (ratio)
+
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/UO_0010006> "\"A dimensionless ratio unit which, given a pair of quantities a and b, for which b is a multiple of a, denotes b by giving the multiplier (coefficient) c for a to result in b.\" [UOB:LKSR]")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/UO_0010006> "ratio")
+SubClassOf(<http://purl.obolibrary.org/obo/UO_0010006> <http://purl.obolibrary.org/obo/UO_0000190>)
+
+# Class: <http://purl.obolibrary.org/obo/UO_0010007> (volt-second per square centimeter)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/UO_0010007> "Vs/cm^2")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/UO_0010007> "volt-second per square centimetre")
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/UO_0010007> "\"An electrical mobility unit which is equal to one volt second per square centimeter.\" [UOB:LKSR]")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/UO_0010007> "volt-second per square centimeter")
+SubClassOf(<http://purl.obolibrary.org/obo/UO_0010007> <http://purl.obolibrary.org/obo/UO_0000262>)
 
 # Class: <http://purl.obolibrary.org/obo/UO_0010008> (kilometer per hour)
 
@@ -3654,6 +3792,55 @@ AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/UO_0010040> "teas
 EquivalentClasses(<http://purl.obolibrary.org/obo/UO_0010040> ObjectOneOf(<http://purl.obolibrary.org/obo/UO_0010040>))
 SubClassOf(<http://purl.obolibrary.org/obo/UO_0010040> <http://purl.obolibrary.org/obo/UO_1010040>)
 
+# Class: <http://purl.obolibrary.org/obo/UO_0010041> (united states customary teaspoon)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/UO_0010041> "us customary teaspoon")
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/UO_0010041> "\"A United States customary units teaspoon is a unit of measurement of volume widely used in cooking recipes and pharmaceutic prescriptions in America. It equals a 4.93 mL volume.\" [Wikipedia:https://en.wikipedia.org/wiki/United_States_customary_units#Cooking_measures]")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/UO_0010041> "united states customary teaspoon")
+SubClassOf(<http://purl.obolibrary.org/obo/UO_0010041> <http://purl.obolibrary.org/obo/UO_0000095>)
+
+# Class: <http://purl.obolibrary.org/obo/UO_0010042> (tablespoon)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/UO_0010042> "metric tablespoon")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/UO_0010042> "tbsp")
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/UO_0010042> "\"A metric tablespoon is a unit of measurement of volume widely used in cooking recipes and pharmaceutic prescriptions. It equals a 15mL volume.\" [Wikipedia:https://en.wikipedia.org/wiki/Tablespoon]")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/UO_0010042> "tablespoon")
+SubClassOf(<http://purl.obolibrary.org/obo/UO_0010042> <http://purl.obolibrary.org/obo/UO_0000095>)
+
+# Class: <http://purl.obolibrary.org/obo/UO_0010043> (australian metric tablespoon)
+
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/UO_0010043> "\"An Australian metric tablespoon is a unit of measurement of volume used in Australia for cooking recipes and pharmaceutic prescriptions. It equals a 20mL volume.\" [Wikipedia:https://en.wikipedia.org/wiki/Tablespoon]")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/UO_0010043> "australian metric tablespoon")
+SubClassOf(<http://purl.obolibrary.org/obo/UO_0010043> <http://purl.obolibrary.org/obo/UO_0000095>)
+
+# Class: <http://purl.obolibrary.org/obo/UO_0010044> (united states customary tablespoon)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/UO_0010044> "us customary tablespoon")
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/UO_0010044> "\"A United States customary units tablespoon is a unit of measurement of volume widely used in cooking recipes and pharmaceutic prescriptions in America. It equals a 14.79 mL volume.\" [Wikipedia:https://en.wikipedia.org/wiki/United_States_customary_units#Cooking_measures]")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/UO_0010044> "united states customary tablespoon")
+SubClassOf(<http://purl.obolibrary.org/obo/UO_0010044> <http://purl.obolibrary.org/obo/UO_0000095>)
+
+# Class: <http://purl.obolibrary.org/obo/UO_0010045> (metric cup)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/UO_0010045> "C")
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/UO_0010045> "\"A metric cup is a unit of measurement of volume widely used in cooking recipes and pharmaceutic prescriptions. It equals a 250mL volume.\" [Wikipedia:https://en.wikipedia.org/wiki/Cooking_weights_and_measures]")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/UO_0010045> "metric cup")
+SubClassOf(<http://purl.obolibrary.org/obo/UO_0010045> <http://purl.obolibrary.org/obo/UO_0000095>)
+
+# Class: <http://purl.obolibrary.org/obo/UO_0010046> (united states customary cup)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/UO_0010046> "us customary cup")
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/UO_0010046> "\"A United States customary units cup is a unit of measurement of volume widely used in cooking recipes and pharmaceutic prescriptions in America. It equals a 236.59 mL volume.\" [Wikipedia:https://en.wikipedia.org/wiki/United_States_customary_units#Cooking_measures]")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/UO_0010046> "united states customary cup")
+SubClassOf(<http://purl.obolibrary.org/obo/UO_0010046> <http://purl.obolibrary.org/obo/UO_0000095>)
+
+# Class: <http://purl.obolibrary.org/obo/UO_0010047> (united states fda cup)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/UO_0010047> "us fda cup")
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/UO_0010047> "\"A United States FDA cup is a unit of measurement of volume used by the US Federal Department of Agriculture as a nutritional serving measure. It equals a 240 mL volume.\" [Wikipedia:https://en.wikipedia.org/wiki/United_States_customary_units#Cooking_measures]")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/UO_0010047> "united states fda cup")
+SubClassOf(<http://purl.obolibrary.org/obo/UO_0010047> <http://purl.obolibrary.org/obo/UO_0000095>)
+
 # Class: <http://purl.obolibrary.org/obo/UO_0010048> (micromole)
 
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/UO_0010048> "\"DEPRECATED: Duplicate of http://purl.obolibrary.org/obo/UO_0000039. A substance unit which is equal to one millionth of a mole.\" [UOB:LTS]")
@@ -3693,6 +3880,14 @@ AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/UO_0010051> "\"
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/UO_0010051> "large calorie")
 EquivalentClasses(<http://purl.obolibrary.org/obo/UO_0010051> ObjectOneOf(<http://purl.obolibrary.org/obo/UO_0010051>))
 SubClassOf(<http://purl.obolibrary.org/obo/UO_0010051> <http://purl.obolibrary.org/obo/UO_1010051>)
+
+# Class: <http://purl.obolibrary.org/obo/UO_0010052> (pounds per square inch)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/UO_0010052> "lbf/in^[2]")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/UO_0010052> "psi")
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/UO_0010052> "\"A pressure unit which is equal to 6894.757 pascal.\" [Wikipedia:Wikipedia]")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/UO_0010052> "pounds per square inch")
+SubClassOf(<http://purl.obolibrary.org/obo/UO_0010052> <http://purl.obolibrary.org/obo/UO_0000109>)
 
 # Class: <http://purl.obolibrary.org/obo/UO_0010053> (micrograms per wheaton bottle)
 
@@ -3840,6 +4035,63 @@ EquivalentClasses(<http://purl.obolibrary.org/obo/UO_0010068> ObjectIntersection
 EquivalentClasses(<http://purl.obolibrary.org/obo/UO_0010068> ObjectOneOf(<http://purl.obolibrary.org/obo/UO_0010068>))
 SubClassOf(<http://purl.obolibrary.org/obo/UO_0010068> <http://purl.obolibrary.org/obo/UO_1000208>)
 SubClassOf(<http://purl.obolibrary.org/obo/UO_0010068> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/has_prefix> <http://purl.obolibrary.org/obo/UO_0000299>))
+
+# Class: <http://purl.obolibrary.org/obo/UO_0010070> (picogram per milliliter)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/UO_0010070> "pg/mL"@en)
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/UO_0010070> "A gram per milliliter unit which is equal to one picogram per one milliliter."@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/UO_0010070> "picogram per milliliter"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/UO_0010070> <http://purl.obolibrary.org/obo/UO_1000173>)
+
+# Class: <http://purl.obolibrary.org/obo/UO_0010072> (microgram per microliter)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/UO_0010072> "mcg/mcL"@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/UO_0010072> "ug/uL"@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/UO_0010072> "µg/µL"@en)
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/UO_0010072> "\"A mass unit density which is equal to mass of an object in nanograms divided by the volume in microliters.\" [UOB:LTS]"@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/UO_0010072> "microgram per microliter"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/UO_0010072> <http://purl.obolibrary.org/obo/UO_0000052>)
+
+# Class: <http://purl.obolibrary.org/obo/UO_0010073> (cell count)
+
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/UO_0010073> "A count unit that denotes a count of cells."@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/UO_0010073> "cell count"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/UO_0010073> <http://purl.obolibrary.org/obo/UO_0000189>)
+
+# Class: <http://purl.obolibrary.org/obo/UO_0010074> (heartbeats per minute)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/UO_0010074> "BPM"@en)
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/UO_0010074> "A rate unit which represents a measurement of the number of an organism's heartbeats per one minute."@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/UO_0010074> "heartbeats per minute"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/UO_0010074> <http://purl.obolibrary.org/obo/UO_0000280>)
+
+# Class: <http://purl.obolibrary.org/obo/UO_0010075> (multiplicity of infection)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/UO_0010075> "MOI"@en)
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/UO_0010075> "A ratio unit which denotes the quantity of infectious agents to infection targets."@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/UO_0010075> "multiplicity of infection"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/UO_0010075> <http://purl.obolibrary.org/obo/UO_0000190>)
+
+# Class: <http://purl.obolibrary.org/obo/UO_0010076> (breaths per minute)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/UO_0010076> "br/min"@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/UO_0010076> "brpm"@en)
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/UO_0010076> "A rate unit which represents a measurement of the number of breaths taken by an organism per one minute."@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/UO_0010076> "breaths per minute"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/UO_0010076> <http://purl.obolibrary.org/obo/UO_0000280>)
+
+# Class: <http://purl.obolibrary.org/obo/UO_0010077> (PCR quantification cycle)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/UO_0010077> "Ct"@en)
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/UO_0010077> "A count unit of how many Polymerase Chain Reaction (PCR) cycles it took to detect a real signal from a sample. Equivalent to the PCR cycle number at which a sample's reaction curve intersects the threshold line."@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/UO_0010077> "PCR quantification cycle"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/UO_0010077> <http://purl.obolibrary.org/obo/UO_0000189>)
+
+# Class: <http://purl.obolibrary.org/obo/UO_0010080> (titer)
+
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/UO_0010080> "A concentration unit which denotes the minimum amount of a substance in a solution that still yields a positive reading, as determined by serial dilution."@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/UO_0010080> "titer"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/UO_0010080> <http://purl.obolibrary.org/obo/UO_0000051>)
 
 # Class: <http://purl.obolibrary.org/obo/UO_1000008> (meter based unit)
 

@@ -26,11 +26,11 @@ These are the current imports in AK-ONTOLOGY
 | OBI | http://purl.obolibrary.org/obo/OBI.owl | None |
 | OGMS | http://purl.obolibrary.org/obo/OGMS.owl | None |
 | OMRSE | http://purl.obolibrary.org/obo/OMRSE.owl | None |
-| PATO | http://purl.obolibrary.org/obo/PATO.owl | None |
+| PATO | http://purl.obolibrary.org/obo/PATO.owl | slme |
 | RO | http://purl.obolibrary.org/obo/RO.owl | None |
 | SBO | http://purl.obolibrary.org/obo/SBO.owl | None |
 | UBERON | http://purl.obolibrary.org/obo/UBERON.owl | None |
-| UO | http://purl.obolibrary.org/obo/UO.owl | None |
+| UO | http://purl.obolibrary.org/obo/UO.owl | slme |
 | VO | http://purl.obolibrary.org/obo/VO.owl | None |
 
 ## Components

@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                71adfbcfa2c614a5864e1a7f2ea984f39aa4721d3b1f7bc182ed20dd034dca1c
+CONFIG_HASH=                f20d56e19723ab11dfb47a3ca9baffc5adc8b719b4af2670e60704b80fdad20e
 
 
 # ----------------------------------------
@@ -384,6 +384,22 @@ $(IMPORTDIR)/DOID_import.owl: $(MIRRORDIR)/DOID.owl $(IMPORTDIR)/DOID_terms_comb
 
 $(IMPORTDIR)/GAZ_import.owl: $(MIRRORDIR)/GAZ.owl $(IMPORTDIR)/GAZ_terms_combined.txt
 	if [ $(IMP) = true ] && [ $(IMP_LARGE) = true ]; then $(ROBOT) extract -i $< -T $(IMPORTDIR)/GAZ_terms_combined.txt --force true  --copy-ontology-annotations true --individuals include --method BOT \
+		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
+		$(ANNOTATE_CONVERT_FILE); fi
+
+## Module for ontology: PATO
+
+$(IMPORTDIR)/PATO_import.owl: $(MIRRORDIR)/PATO.owl $(IMPORTDIR)/PATO_terms_combined.txt
+	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
+		extract -T $(IMPORTDIR)/PATO_terms_combined.txt --copy-ontology-annotations true --force true --individuals include --method TOP \
+		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
+		$(ANNOTATE_CONVERT_FILE); fi
+
+## Module for ontology: UO
+
+$(IMPORTDIR)/UO_import.owl: $(MIRRORDIR)/UO.owl $(IMPORTDIR)/UO_terms_combined.txt
+	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
+		extract -T $(IMPORTDIR)/UO_terms_combined.txt --copy-ontology-annotations true --force true --individuals include --method TOP \
 		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
 		$(ANNOTATE_CONVERT_FILE); fi
 
