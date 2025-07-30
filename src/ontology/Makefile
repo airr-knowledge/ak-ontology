@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                39068016a7a3bd9ee8180df6a20ff316731d4d5dca9057f0ff91b48fdd6cf9de
+CONFIG_HASH=                71adfbcfa2c614a5864e1a7f2ea984f39aa4721d3b1f7bc182ed20dd034dca1c
 
 
 # ----------------------------------------
@@ -364,6 +364,22 @@ $(IMPORTDIR)/%_import.owl: $(MIRRORDIR)/%.owl $(IMPORTDIR)/%_terms_combined.txt
 
 .PRECIOUS: $(IMPORTDIR)/%_import.owl
 
+## Module for ontology: CL
+
+$(IMPORTDIR)/CL_import.owl: $(MIRRORDIR)/CL.owl $(IMPORTDIR)/CL_terms_combined.txt
+	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
+		extract -T $(IMPORTDIR)/CL_terms_combined.txt --copy-ontology-annotations true --force true --individuals include --method TOP \
+		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
+		$(ANNOTATE_CONVERT_FILE); fi
+
+## Module for ontology: DOID
+
+$(IMPORTDIR)/DOID_import.owl: $(MIRRORDIR)/DOID.owl $(IMPORTDIR)/DOID_terms_combined.txt
+	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
+		extract -T $(IMPORTDIR)/DOID_terms_combined.txt --copy-ontology-annotations true --force true --individuals include --method TOP \
+		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
+		$(ANNOTATE_CONVERT_FILE); fi
+
 ## Module for ontology: GAZ
 
 $(IMPORTDIR)/GAZ_import.owl: $(MIRRORDIR)/GAZ.owl $(IMPORTDIR)/GAZ_terms_combined.txt
@@ -423,7 +439,7 @@ mirror-BFO: | $(TMPDIR)
 .PHONY: mirror-CL
 .PRECIOUS: $(MIRRORDIR)/CL.owl
 mirror-CL: | $(TMPDIR)
-	curl -L $(OBOBASE)/CL.owl --create-dirs -o $(TMPDIR)/CL-download.owl --retry 4 --max-time 200 && \
+	curl -L $(OBOBASE)/CL/CL-base.owl --create-dirs -o $(TMPDIR)/CL-download.owl --retry 4 --max-time 200 && \
 	$(ROBOT) convert -i $(TMPDIR)/CL-download.owl -o $(TMPDIR)/$@.owl
 
 
