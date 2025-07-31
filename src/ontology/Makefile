@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                f20d56e19723ab11dfb47a3ca9baffc5adc8b719b4af2670e60704b80fdad20e
+CONFIG_HASH=                397382184ffd6872822c9f7ecf29f63fa6180ba3be4a95d3a9b18ec3000b3237
 
 
 # ----------------------------------------
@@ -395,6 +395,14 @@ $(IMPORTDIR)/PATO_import.owl: $(MIRRORDIR)/PATO.owl $(IMPORTDIR)/PATO_terms_comb
 		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
 		$(ANNOTATE_CONVERT_FILE); fi
 
+## Module for ontology: UBERON
+
+$(IMPORTDIR)/UBERON_import.owl: $(MIRRORDIR)/UBERON.owl $(IMPORTDIR)/UBERON_terms_combined.txt
+	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
+		extract -T $(IMPORTDIR)/UBERON_terms_combined.txt --copy-ontology-annotations true --force true --individuals include --method TOP \
+		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
+		$(ANNOTATE_CONVERT_FILE); fi
+
 ## Module for ontology: UO
 
 $(IMPORTDIR)/UO_import.owl: $(MIRRORDIR)/UO.owl $(IMPORTDIR)/UO_terms_combined.txt
@@ -548,7 +556,7 @@ mirror-SBO: | $(TMPDIR)
 .PHONY: mirror-UBERON
 .PRECIOUS: $(MIRRORDIR)/UBERON.owl
 mirror-UBERON: | $(TMPDIR)
-	curl -L $(OBOBASE)/UBERON.owl --create-dirs -o $(TMPDIR)/UBERON-download.owl --retry 4 --max-time 200 && \
+	curl -L $(OBOBASE)/UBERON/UBERON-base.owl --create-dirs -o $(TMPDIR)/UBERON-download.owl --retry 4 --max-time 200 && \
 	$(ROBOT) convert -i $(TMPDIR)/UBERON-download.owl -o $(TMPDIR)/$@.owl
 
 

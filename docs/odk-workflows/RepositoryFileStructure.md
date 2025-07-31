@@ -29,7 +29,7 @@ These are the current imports in AK-ONTOLOGY
 | PATO | http://purl.obolibrary.org/obo/PATO.owl | slme |
 | RO | http://purl.obolibrary.org/obo/RO.owl | None |
 | SBO | http://purl.obolibrary.org/obo/SBO.owl | None |
-| UBERON | http://purl.obolibrary.org/obo/UBERON.owl | None |
+| UBERON | http://purl.obolibrary.org/obo/UBERON.owl | slme |
 | UO | http://purl.obolibrary.org/obo/UO.owl | slme |
 | VO | http://purl.obolibrary.org/obo/VO.owl | None |
 

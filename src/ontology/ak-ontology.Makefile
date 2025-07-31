@@ -3,7 +3,7 @@
 ## If you need to customize your Makefile, make
 ## changes here rather than in the main Makefile
 
-all_exports: exports/CL.tsv exports/DOID.tsv exports/PATO.tsv exports/UO.tsv
+all_exports: exports/CL.tsv exports/DOID.tsv exports/PATO.tsv exports/UO.tsv exports/UBERON.tsv
 
 exports/:
 	mkdir -p $@
