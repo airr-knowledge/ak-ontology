@@ -23,7 +23,7 @@ These are the current imports in AK-ONTOLOGY
 | EXO | http://purl.obolibrary.org/obo/EXO.owl | None |
 | GAZ | http://purl.obolibrary.org/obo/GAZ.owl | None |
 | IAO | http://purl.obolibrary.org/obo/IAO.owl | None |
-| OBI | http://purl.obolibrary.org/obo/OBI.owl | None |
+| OBI | http://purl.obolibrary.org/obo/OBI.owl | slme |
 | OGMS | http://purl.obolibrary.org/obo/OGMS.owl | None |
 | OMRSE | http://purl.obolibrary.org/obo/OMRSE.owl | None |
 | PATO | http://purl.obolibrary.org/obo/PATO.owl | slme |

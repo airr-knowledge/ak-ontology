@@ -40,6 +40,7 @@ src/ontology/imports/GAZ_import.owl
 src/ontology/imports/DOID_import.owl
 src/ontology/imports/PATO_import.owl
 src/ontology/imports/UBERON_import.owl
+src/ontology/imports/OBI_import.owl
 
 src/patterns/data/**/*.ofn
 src/patterns/data/**/*.txt

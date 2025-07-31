@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                397382184ffd6872822c9f7ecf29f63fa6180ba3be4a95d3a9b18ec3000b3237
+CONFIG_HASH=                2a3d716b789941d0051e116755e2bb57cf81c69cb9ba84c7adf655477558f791
 
 
 # ----------------------------------------
@@ -384,6 +384,14 @@ $(IMPORTDIR)/DOID_import.owl: $(MIRRORDIR)/DOID.owl $(IMPORTDIR)/DOID_terms_comb
 
 $(IMPORTDIR)/GAZ_import.owl: $(MIRRORDIR)/GAZ.owl $(IMPORTDIR)/GAZ_terms_combined.txt
 	if [ $(IMP) = true ] && [ $(IMP_LARGE) = true ]; then $(ROBOT) extract -i $< -T $(IMPORTDIR)/GAZ_terms_combined.txt --force true  --copy-ontology-annotations true --individuals include --method BOT \
+		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
+		$(ANNOTATE_CONVERT_FILE); fi
+
+## Module for ontology: OBI
+
+$(IMPORTDIR)/OBI_import.owl: $(MIRRORDIR)/OBI.owl $(IMPORTDIR)/OBI_terms_combined.txt
+	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
+		extract -T $(IMPORTDIR)/OBI_terms_combined.txt --copy-ontology-annotations true --force true --individuals include --method TOP \
 		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
 		$(ANNOTATE_CONVERT_FILE); fi
 
