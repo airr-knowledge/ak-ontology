@@ -1,22 +1,13 @@
-Prefix(:=<http://purl.obolibrary.org/obo/ak-ontology/imports/EXO_import.owl#>)
+Prefix(:=<http://purl.obolibrary.org/obo/ak-ontology/imports/EXO_import.owl>)
+Prefix(obo:=<http://purl.obolibrary.org/obo/>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
 Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
 Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
 Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
-
+Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
 
 Ontology(<http://purl.obolibrary.org/obo/ak-ontology/imports/EXO_import.owl>
-<http://purl.obolibrary.org/obo/ak-ontology/releases/2025-07-31/imports/EXO_import.owl>
-Annotation(<http://purl.org/dc/elements/1.1/source> <http://purl.obolibrary.org/obo/exo/releases/2022-06-29/exo.owl>)
-Annotation(owl:versionInfo "2025-07-31")
-
-Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/description>))
-Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/source>))
-Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/title>))
-Declaration(AnnotationProperty(<http://purl.org/dc/terms/license>))
-Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#default-namespace>))
-Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasOBOFormatVersion>))
-
-
+# This is a placeholder, it will be regenerated when makefile is first executed.
 )
+

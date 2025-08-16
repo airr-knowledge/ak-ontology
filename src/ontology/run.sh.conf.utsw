@@ -1,0 +1,6 @@
+# increase memory for robot
+export ODK_JAVA_OPTS="-Xmx128G"
+
+# UTSW proxy
+export ODK_DOCKER_OPTIONS="-e http_proxy=http://proxy.swmed.edu:3128/ -e https_proxy=http://proxy.swmed.edu:3128/ -e HTTP_PROXY=http://proxy.swmed.edu:3128/ -e HTTPS_PROXY=http://proxy.swmed.edu:3128/"
+export ODK_JAVA_OPTS="$ODK_JAVA_OPTS -Dhttp.proxyHost=proxy.swmed.edu -Dhttp.proxyPort=3128"

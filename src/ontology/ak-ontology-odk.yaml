@@ -17,8 +17,12 @@ import_group:
     - id: GAZ
       is_large: TRUE
     - id: IAO
-#    - id: NCBITaxon
-#      is_large: TRUE
+    - id: NCBITaxon
+      module_type: slme
+      module_type_slme: TOP
+    - id: MRO
+      module_type: slme
+      module_type_slme: TOP
     - id: OBI
       module_type: slme
       module_type_slme: TOP

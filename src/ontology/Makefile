@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                2a3d716b789941d0051e116755e2bb57cf81c69cb9ba84c7adf655477558f791
+CONFIG_HASH=                4c1515cd89ebff9ba1391933177df41c93ccde1afb3d8d5bdf7f20b2202e0d2a
 
 
 # ----------------------------------------
@@ -159,7 +159,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  APOLLO_SV BFO CL DOID EXO GAZ IAO OBI OGMS OMRSE PATO RO SBO UBERON UO VO
+IMPORTS =  APOLLO_SV BFO CL DOID EXO GAZ IAO NCBITaxon MRO OBI OGMS OMRSE PATO RO SBO UBERON UO VO
 
 IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -387,6 +387,22 @@ $(IMPORTDIR)/GAZ_import.owl: $(MIRRORDIR)/GAZ.owl $(IMPORTDIR)/GAZ_terms_combine
 		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
 		$(ANNOTATE_CONVERT_FILE); fi
 
+## Module for ontology: NCBITaxon
+
+$(IMPORTDIR)/NCBITaxon_import.owl: $(MIRRORDIR)/NCBITaxon.owl $(IMPORTDIR)/NCBITaxon_terms_combined.txt
+	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
+		extract -T $(IMPORTDIR)/NCBITaxon_terms_combined.txt --copy-ontology-annotations true --force true --individuals include --method TOP \
+		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
+		$(ANNOTATE_CONVERT_FILE); fi
+
+## Module for ontology: MRO
+
+$(IMPORTDIR)/MRO_import.owl: $(MIRRORDIR)/MRO.owl $(IMPORTDIR)/MRO_terms_combined.txt
+	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
+		extract -T $(IMPORTDIR)/MRO_terms_combined.txt --copy-ontology-annotations true --force true --individuals include --method TOP \
+		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
+		$(ANNOTATE_CONVERT_FILE); fi
+
 ## Module for ontology: OBI
 
 $(IMPORTDIR)/OBI_import.owl: $(MIRRORDIR)/OBI.owl $(IMPORTDIR)/OBI_terms_combined.txt
@@ -510,6 +526,22 @@ endif
 mirror-IAO: | $(TMPDIR)
 	curl -L $(OBOBASE)/IAO.owl --create-dirs -o $(TMPDIR)/IAO-download.owl --retry 4 --max-time 200 && \
 	$(ROBOT) convert -i $(TMPDIR)/IAO-download.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: NCBITaxon
+.PHONY: mirror-NCBITaxon
+.PRECIOUS: $(MIRRORDIR)/NCBITaxon.owl
+mirror-NCBITaxon: | $(TMPDIR)
+	curl -L $(OBOBASE)/NCBITaxon.owl --create-dirs -o $(TMPDIR)/NCBITaxon-download.owl --retry 4 --max-time 200 && \
+	$(ROBOT) convert -i $(TMPDIR)/NCBITaxon-download.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: MRO
+.PHONY: mirror-MRO
+.PRECIOUS: $(MIRRORDIR)/MRO.owl
+mirror-MRO: | $(TMPDIR)
+	curl -L $(OBOBASE)/MRO.owl --create-dirs -o $(TMPDIR)/MRO-download.owl --retry 4 --max-time 200 && \
+	$(ROBOT) convert -i $(TMPDIR)/MRO-download.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: OBI

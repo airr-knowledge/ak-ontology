@@ -23,6 +23,8 @@ These are the current imports in AK-ONTOLOGY
 | EXO | http://purl.obolibrary.org/obo/EXO.owl | None |
 | GAZ | http://purl.obolibrary.org/obo/GAZ.owl | None |
 | IAO | http://purl.obolibrary.org/obo/IAO.owl | None |
+| NCBITaxon | http://purl.obolibrary.org/obo/NCBITaxon.owl | slme |
+| MRO | http://purl.obolibrary.org/obo/MRO.owl | slme |
 | OBI | http://purl.obolibrary.org/obo/OBI.owl | slme |
 | OGMS | http://purl.obolibrary.org/obo/OGMS.owl | None |
 | OMRSE | http://purl.obolibrary.org/obo/OMRSE.owl | None |

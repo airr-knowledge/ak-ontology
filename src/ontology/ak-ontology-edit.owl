@@ -13,6 +13,18 @@ Ontology(<http://purl.obolibrary.org/obo/ak-ontology.owl>
 
 Import(<http://purl.obolibrary.org/obo/ak-ontology/imports/CL_import.owl>)
 
+Import(<http://purl.obolibrary.org/obo/ak-ontology/imports/DOID_import.owl>)
+
+Import(<http://purl.obolibrary.org/obo/ak-ontology/imports/MRO_import.owl>)
+
+Import(<http://purl.obolibrary.org/obo/ak-ontology/imports/NCBITaxon_import.owl>)
+
+Import(<http://purl.obolibrary.org/obo/ak-ontology/imports/OBI_import.owl>)
+
+Import(<http://purl.obolibrary.org/obo/ak-ontology/imports/PATO_import.owl>)
+
+Import(<http://purl.obolibrary.org/obo/ak-ontology/imports/UBERON_import.owl>)
+
 Import(<http://purl.obolibrary.org/obo/ak-ontology/imports/UO_import.owl>)
 
 

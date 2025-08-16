@@ -3,7 +3,10 @@
 ## If you need to customize your Makefile, make
 ## changes here rather than in the main Makefile
 
-all_exports: exports/CL.tsv exports/DOID.tsv exports/PATO.tsv exports/UO.tsv exports/UBERON.tsv exports/OBI.tsv
+clean_exports:
+	rm -rf exports
+
+all_exports: exports/CL.tsv exports/DOID.tsv exports/PATO.tsv exports/UO.tsv exports/UBERON.tsv exports/OBI.tsv exports/MRO.tsv exports/NCBITaxon.tsv
 
 exports/:
 	mkdir -p $@
@@ -63,6 +66,26 @@ exports/OBI.tsv: imports/OBI_import.owl | exports/
 	--input $< \
 	--method MIREOT \
 	--branch-from-term BFO:0000001 \
+	export \
+	--header 'ID|Label|SubClassOf [ID]' \
+	--sort ID \
+	--export $@
+
+exports/MRO.tsv: imports/MRO_import.owl | exports/
+	$(ROBOT) extract \
+	--input $< \
+	--method MIREOT \
+	--branch-from-term PR:000000001 \
+	export \
+	--header 'ID|Label|SubClassOf [ID]' \
+	--sort ID \
+	--export $@
+
+exports/NCBITaxon.tsv: imports/NCBITaxon_import.owl | exports/
+	$(ROBOT) extract \
+	--input $< \
+	--method MIREOT \
+	--branch-from-term NCBITaxon:131567 \
 	export \
 	--header 'ID|Label|SubClassOf [ID]' \
 	--sort ID \

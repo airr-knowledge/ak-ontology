@@ -5,10 +5,28 @@
   
   <uri name="http://purl.obolibrary.org/obo/ak-ontology/imports/CL_import.owl" uri="imports/CL_import.owl"/>
   <uri name="http://purl.obolibrary.org/obo/ak-ontology/imports/CL_import.obo" uri="imports/CL_import.obo"/>
+
+  <uri name="http://purl.obolibrary.org/obo/ak-ontology/imports/DOID_import.owl" uri="imports/DOID_import.owl"/>
+  <uri name="http://purl.obolibrary.org/obo/ak-ontology/imports/DOID_import.obo" uri="imports/DOID_import.obo"/>
   
+  <uri name="http://purl.obolibrary.org/obo/ak-ontology/imports/MRO_import.owl" uri="imports/MRO_import.owl"/>
+  <uri name="http://purl.obolibrary.org/obo/ak-ontology/imports/MRO_import.obo" uri="imports/MRO_import.obo"/>
+
+  <uri name="http://purl.obolibrary.org/obo/ak-ontology/imports/NCBITaxon_import.owl" uri="imports/NCBITaxon_import.owl"/>
+  <uri name="http://purl.obolibrary.org/obo/ak-ontology/imports/NCBITaxon_import.obo" uri="imports/NCBITaxon_import.obo"/>
+
+  <uri name="http://purl.obolibrary.org/obo/ak-ontology/imports/OBI_import.owl" uri="imports/OBI_import.owl"/>
+  <uri name="http://purl.obolibrary.org/obo/ak-ontology/imports/OBI_import.obo" uri="imports/OBI_import.obo"/>
+
+  <uri name="http://purl.obolibrary.org/obo/ak-ontology/imports/PATO_import.owl" uri="imports/PATO_import.owl"/>
+  <uri name="http://purl.obolibrary.org/obo/ak-ontology/imports/PATO_import.obo" uri="imports/PATO_import.obo"/>
+
+  <uri name="http://purl.obolibrary.org/obo/ak-ontology/imports/UBERON_import.owl" uri="imports/UBERON_import.owl"/>
+  <uri name="http://purl.obolibrary.org/obo/ak-ontology/imports/UBERON_import.obo" uri="imports/UBERON_import.obo"/>
+
   <uri name="http://purl.obolibrary.org/obo/ak-ontology/imports/UO_import.owl" uri="imports/UO_import.owl"/>
   <uri name="http://purl.obolibrary.org/obo/ak-ontology/imports/UO_import.obo" uri="imports/UO_import.obo"/>
-  
+
 
 
 
