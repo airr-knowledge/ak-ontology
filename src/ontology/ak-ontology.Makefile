@@ -20,6 +20,7 @@ exports/CL.tsv: imports/CL_import.owl | exports/
 	--header 'ID|Label|SubClassOf [ID]' \
 	--sort ID \
 	--export $@
+	python3 ../scripts/ontology_table_transform.py exports/CL.tsv CellOntology
 
 exports/DOID.tsv: imports/DOID_import.owl | exports/
 	$(ROBOT) extract \
@@ -30,6 +31,7 @@ exports/DOID.tsv: imports/DOID_import.owl | exports/
 	--header 'ID|Label|SubClassOf [ID]' \
 	--sort ID \
 	--export $@
+	python3 ../scripts/ontology_table_transform.py exports/DOID.tsv TODO
 
 exports/PATO.tsv: imports/PATO_import.owl | exports/
 	$(ROBOT) extract \
@@ -40,6 +42,7 @@ exports/PATO.tsv: imports/PATO_import.owl | exports/
 	--header 'ID|Label|SubClassOf [ID]' \
 	--sort ID \
 	--export $@
+	python3 ../scripts/ontology_table_transform.py exports/PATO.tsv TODO
 
 exports/UO.tsv: imports/UO_import.owl | exports/
 	$(ROBOT) extract \
@@ -50,6 +53,7 @@ exports/UO.tsv: imports/UO_import.owl | exports/
 	--header 'ID|Label|SubClassOf [ID]' \
 	--sort ID \
 	--export $@
+	python3 ../scripts/ontology_table_transform.py exports/UO.tsv TODO
 
 exports/UBERON.tsv: imports/UBERON_import.owl | exports/
 	$(ROBOT) extract \
@@ -60,6 +64,7 @@ exports/UBERON.tsv: imports/UBERON_import.owl | exports/
 	--header 'ID|Label|SubClassOf [ID]' \
 	--sort ID \
 	--export $@
+	python3 ../scripts/ontology_table_transform.py exports/UBERON.tsv TODO
 
 exports/OBI.tsv: imports/OBI_import.owl | exports/
 	$(ROBOT) extract \
@@ -70,6 +75,7 @@ exports/OBI.tsv: imports/OBI_import.owl | exports/
 	--header 'ID|Label|SubClassOf [ID]' \
 	--sort ID \
 	--export $@
+	python3 ../scripts/ontology_table_transform.py exports/OBI.tsv BiomedicalInvestigations
 
 exports/MRO.tsv: imports/MRO_import.owl | exports/
 	$(ROBOT) extract \
@@ -80,6 +86,7 @@ exports/MRO.tsv: imports/MRO_import.owl | exports/
 	--header 'ID|Label|SubClassOf [ID]' \
 	--sort ID \
 	--export $@
+	python3 ../scripts/ontology_table_transform.py exports/MRO.tsv TODO
 
 exports/NCBITaxon.tsv: imports/NCBITaxon_import.owl | exports/
 	$(ROBOT) extract \
@@ -90,3 +97,4 @@ exports/NCBITaxon.tsv: imports/NCBITaxon_import.owl | exports/
 	--header 'ID|Label|SubClassOf [ID]' \
 	--sort ID \
 	--export $@
+	python3 ../scripts/ontology_table_transform.py exports/NCBITaxon.tsv TODO
