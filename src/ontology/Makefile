@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                4c1515cd89ebff9ba1391933177df41c93ccde1afb3d8d5bdf7f20b2202e0d2a
+CONFIG_HASH=                9a2eff31d82876b471b2e56a1820263e05efa1b588db8a6aae66a40e4fce7c78
 
 
 # ----------------------------------------
@@ -159,7 +159,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  APOLLO_SV BFO CL DOID EXO GAZ IAO NCBITaxon MRO OBI OGMS OMRSE PATO RO SBO UBERON UO VO
+IMPORTS =  APOLLO_SV BFO CL DOID EXO GAZ IAO MRO OBI OGMS OMRSE PATO RO SBO UBERON UO VO
 
 IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -387,14 +387,6 @@ $(IMPORTDIR)/GAZ_import.owl: $(MIRRORDIR)/GAZ.owl $(IMPORTDIR)/GAZ_terms_combine
 		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
 		$(ANNOTATE_CONVERT_FILE); fi
 
-## Module for ontology: NCBITaxon
-
-$(IMPORTDIR)/NCBITaxon_import.owl: $(MIRRORDIR)/NCBITaxon.owl $(IMPORTDIR)/NCBITaxon_terms_combined.txt
-	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
-		extract -T $(IMPORTDIR)/NCBITaxon_terms_combined.txt --copy-ontology-annotations true --force true --individuals include --method TOP \
-		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
-		$(ANNOTATE_CONVERT_FILE); fi
-
 ## Module for ontology: MRO
 
 $(IMPORTDIR)/MRO_import.owl: $(MIRRORDIR)/MRO.owl $(IMPORTDIR)/MRO_terms_combined.txt
@@ -471,7 +463,7 @@ ifeq ($(strip $(MIR)),true)
 .PHONY: mirror-APOLLO_SV
 .PRECIOUS: $(MIRRORDIR)/APOLLO_SV.owl
 mirror-APOLLO_SV: | $(TMPDIR)
-	curl -L $(OBOBASE)/APOLLO_SV.owl --create-dirs -o $(TMPDIR)/APOLLO_SV-download.owl --retry 4 --max-time 200 && \
+	curl -L $(OBOBASE)/APOLLO_SV.owl --create-dirs -o $(TMPDIR)/APOLLO_SV-download.owl --retry 4 --max-time 2000 && \
 	$(ROBOT) convert -i $(TMPDIR)/APOLLO_SV-download.owl -o $(TMPDIR)/$@.owl
 
 
@@ -479,7 +471,7 @@ mirror-APOLLO_SV: | $(TMPDIR)
 .PHONY: mirror-BFO
 .PRECIOUS: $(MIRRORDIR)/BFO.owl
 mirror-BFO: | $(TMPDIR)
-	curl -L $(OBOBASE)/BFO.owl --create-dirs -o $(TMPDIR)/BFO-download.owl --retry 4 --max-time 200 && \
+	curl -L $(OBOBASE)/BFO.owl --create-dirs -o $(TMPDIR)/BFO-download.owl --retry 4 --max-time 2000 && \
 	$(ROBOT) convert -i $(TMPDIR)/BFO-download.owl -o $(TMPDIR)/$@.owl
 
 
@@ -487,7 +479,7 @@ mirror-BFO: | $(TMPDIR)
 .PHONY: mirror-CL
 .PRECIOUS: $(MIRRORDIR)/CL.owl
 mirror-CL: | $(TMPDIR)
-	curl -L $(OBOBASE)/CL/CL-base.owl --create-dirs -o $(TMPDIR)/CL-download.owl --retry 4 --max-time 200 && \
+	curl -L $(OBOBASE)/CL/CL-base.owl --create-dirs -o $(TMPDIR)/CL-download.owl --retry 4 --max-time 2000 && \
 	$(ROBOT) convert -i $(TMPDIR)/CL-download.owl -o $(TMPDIR)/$@.owl
 
 
@@ -495,7 +487,7 @@ mirror-CL: | $(TMPDIR)
 .PHONY: mirror-DOID
 .PRECIOUS: $(MIRRORDIR)/DOID.owl
 mirror-DOID: | $(TMPDIR)
-	curl -L $(OBOBASE)/DOID.owl --create-dirs -o $(TMPDIR)/DOID-download.owl --retry 4 --max-time 200 && \
+	curl -L $(OBOBASE)/DOID.owl --create-dirs -o $(TMPDIR)/DOID-download.owl --retry 4 --max-time 2000 && \
 	$(ROBOT) convert -i $(TMPDIR)/DOID-download.owl -o $(TMPDIR)/$@.owl
 
 
@@ -503,7 +495,7 @@ mirror-DOID: | $(TMPDIR)
 .PHONY: mirror-EXO
 .PRECIOUS: $(MIRRORDIR)/EXO.owl
 mirror-EXO: | $(TMPDIR)
-	curl -L $(OBOBASE)/EXO.owl --create-dirs -o $(TMPDIR)/EXO-download.owl --retry 4 --max-time 200 && \
+	curl -L $(OBOBASE)/EXO.owl --create-dirs -o $(TMPDIR)/EXO-download.owl --retry 4 --max-time 2000 && \
 	$(ROBOT) convert -i $(TMPDIR)/EXO-download.owl -o $(TMPDIR)/$@.owl
 
 
@@ -512,7 +504,7 @@ mirror-EXO: | $(TMPDIR)
 .PRECIOUS: $(MIRRORDIR)/GAZ.owl
 ifeq ($(strip $(IMP_LARGE)),true)
 mirror-GAZ: | $(TMPDIR)
-	curl -L $(OBOBASE)/GAZ.owl --create-dirs -o $(TMPDIR)/GAZ-download.owl --retry 4 --max-time 200 && \
+	curl -L $(OBOBASE)/GAZ.owl --create-dirs -o $(TMPDIR)/GAZ-download.owl --retry 4 --max-time 2000 && \
 	$(ROBOT) convert -i $(TMPDIR)/GAZ-download.owl -o $(TMPDIR)/$@.owl
 else
 mirror-GAZ:
@@ -524,23 +516,15 @@ endif
 .PHONY: mirror-IAO
 .PRECIOUS: $(MIRRORDIR)/IAO.owl
 mirror-IAO: | $(TMPDIR)
-	curl -L $(OBOBASE)/IAO.owl --create-dirs -o $(TMPDIR)/IAO-download.owl --retry 4 --max-time 200 && \
+	curl -L $(OBOBASE)/IAO.owl --create-dirs -o $(TMPDIR)/IAO-download.owl --retry 4 --max-time 2000 && \
 	$(ROBOT) convert -i $(TMPDIR)/IAO-download.owl -o $(TMPDIR)/$@.owl
-
-
-## ONTOLOGY: NCBITaxon
-.PHONY: mirror-NCBITaxon
-.PRECIOUS: $(MIRRORDIR)/NCBITaxon.owl
-mirror-NCBITaxon: | $(TMPDIR)
-	curl -L $(OBOBASE)/NCBITaxon.owl --create-dirs -o $(TMPDIR)/NCBITaxon-download.owl --retry 4 --max-time 200 && \
-	$(ROBOT) convert -i $(TMPDIR)/NCBITaxon-download.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: MRO
 .PHONY: mirror-MRO
 .PRECIOUS: $(MIRRORDIR)/MRO.owl
 mirror-MRO: | $(TMPDIR)
-	curl -L $(OBOBASE)/MRO.owl --create-dirs -o $(TMPDIR)/MRO-download.owl --retry 4 --max-time 200 && \
+	curl -L $(OBOBASE)/MRO.owl --create-dirs -o $(TMPDIR)/MRO-download.owl --retry 4 --max-time 2000 && \
 	$(ROBOT) convert -i $(TMPDIR)/MRO-download.owl -o $(TMPDIR)/$@.owl
 
 
@@ -548,7 +532,7 @@ mirror-MRO: | $(TMPDIR)
 .PHONY: mirror-OBI
 .PRECIOUS: $(MIRRORDIR)/OBI.owl
 mirror-OBI: | $(TMPDIR)
-	curl -L $(OBOBASE)/OBI.owl --create-dirs -o $(TMPDIR)/OBI-download.owl --retry 4 --max-time 200 && \
+	curl -L $(OBOBASE)/OBI.owl --create-dirs -o $(TMPDIR)/OBI-download.owl --retry 4 --max-time 2000 && \
 	$(ROBOT) convert -i $(TMPDIR)/OBI-download.owl -o $(TMPDIR)/$@.owl
 
 
@@ -556,7 +540,7 @@ mirror-OBI: | $(TMPDIR)
 .PHONY: mirror-OGMS
 .PRECIOUS: $(MIRRORDIR)/OGMS.owl
 mirror-OGMS: | $(TMPDIR)
-	curl -L $(OBOBASE)/OGMS.owl --create-dirs -o $(TMPDIR)/OGMS-download.owl --retry 4 --max-time 200 && \
+	curl -L $(OBOBASE)/OGMS.owl --create-dirs -o $(TMPDIR)/OGMS-download.owl --retry 4 --max-time 2000 && \
 	$(ROBOT) convert -i $(TMPDIR)/OGMS-download.owl -o $(TMPDIR)/$@.owl
 
 
@@ -564,7 +548,7 @@ mirror-OGMS: | $(TMPDIR)
 .PHONY: mirror-OMRSE
 .PRECIOUS: $(MIRRORDIR)/OMRSE.owl
 mirror-OMRSE: | $(TMPDIR)
-	curl -L $(OBOBASE)/OMRSE.owl --create-dirs -o $(TMPDIR)/OMRSE-download.owl --retry 4 --max-time 200 && \
+	curl -L $(OBOBASE)/OMRSE.owl --create-dirs -o $(TMPDIR)/OMRSE-download.owl --retry 4 --max-time 2000 && \
 	$(ROBOT) convert -i $(TMPDIR)/OMRSE-download.owl -o $(TMPDIR)/$@.owl
 
 
@@ -572,7 +556,7 @@ mirror-OMRSE: | $(TMPDIR)
 .PHONY: mirror-PATO
 .PRECIOUS: $(MIRRORDIR)/PATO.owl
 mirror-PATO: | $(TMPDIR)
-	curl -L $(OBOBASE)/PATO.owl --create-dirs -o $(TMPDIR)/PATO-download.owl --retry 4 --max-time 200 && \
+	curl -L $(OBOBASE)/PATO.owl --create-dirs -o $(TMPDIR)/PATO-download.owl --retry 4 --max-time 2000 && \
 	$(ROBOT) convert -i $(TMPDIR)/PATO-download.owl -o $(TMPDIR)/$@.owl
 
 
@@ -580,7 +564,7 @@ mirror-PATO: | $(TMPDIR)
 .PHONY: mirror-RO
 .PRECIOUS: $(MIRRORDIR)/RO.owl
 mirror-RO: | $(TMPDIR)
-	curl -L $(OBOBASE)/RO.owl --create-dirs -o $(TMPDIR)/RO-download.owl --retry 4 --max-time 200 && \
+	curl -L $(OBOBASE)/RO.owl --create-dirs -o $(TMPDIR)/RO-download.owl --retry 4 --max-time 2000 && \
 	$(ROBOT) convert -i $(TMPDIR)/RO-download.owl -o $(TMPDIR)/$@.owl
 
 
@@ -588,7 +572,7 @@ mirror-RO: | $(TMPDIR)
 .PHONY: mirror-SBO
 .PRECIOUS: $(MIRRORDIR)/SBO.owl
 mirror-SBO: | $(TMPDIR)
-	curl -L $(OBOBASE)/SBO.owl --create-dirs -o $(TMPDIR)/SBO-download.owl --retry 4 --max-time 200 && \
+	curl -L $(OBOBASE)/SBO.owl --create-dirs -o $(TMPDIR)/SBO-download.owl --retry 4 --max-time 2000 && \
 	$(ROBOT) convert -i $(TMPDIR)/SBO-download.owl -o $(TMPDIR)/$@.owl
 
 
@@ -596,7 +580,7 @@ mirror-SBO: | $(TMPDIR)
 .PHONY: mirror-UBERON
 .PRECIOUS: $(MIRRORDIR)/UBERON.owl
 mirror-UBERON: | $(TMPDIR)
-	curl -L $(OBOBASE)/UBERON/UBERON-base.owl --create-dirs -o $(TMPDIR)/UBERON-download.owl --retry 4 --max-time 200 && \
+	curl -L $(OBOBASE)/UBERON/UBERON-base.owl --create-dirs -o $(TMPDIR)/UBERON-download.owl --retry 4 --max-time 2000 && \
 	$(ROBOT) convert -i $(TMPDIR)/UBERON-download.owl -o $(TMPDIR)/$@.owl
 
 
@@ -604,7 +588,7 @@ mirror-UBERON: | $(TMPDIR)
 .PHONY: mirror-UO
 .PRECIOUS: $(MIRRORDIR)/UO.owl
 mirror-UO: | $(TMPDIR)
-	curl -L $(OBOBASE)/UO.owl --create-dirs -o $(TMPDIR)/UO-download.owl --retry 4 --max-time 200 && \
+	curl -L $(OBOBASE)/UO.owl --create-dirs -o $(TMPDIR)/UO-download.owl --retry 4 --max-time 2000 && \
 	$(ROBOT) convert -i $(TMPDIR)/UO-download.owl -o $(TMPDIR)/$@.owl
 
 
@@ -612,7 +596,7 @@ mirror-UO: | $(TMPDIR)
 .PHONY: mirror-VO
 .PRECIOUS: $(MIRRORDIR)/VO.owl
 mirror-VO: | $(TMPDIR)
-	curl -L $(OBOBASE)/VO.owl --create-dirs -o $(TMPDIR)/VO-download.owl --retry 4 --max-time 200 && \
+	curl -L $(OBOBASE)/VO.owl --create-dirs -o $(TMPDIR)/VO-download.owl --retry 4 --max-time 2000 && \
 	$(ROBOT) convert -i $(TMPDIR)/VO-download.owl -o $(TMPDIR)/$@.owl
 
 

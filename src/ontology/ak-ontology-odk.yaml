@@ -3,6 +3,7 @@ title: AIRR Knowledge project ontology
 github_org: airr-knowledge
 repo: ak-ontology
 import_group:
+  mirror_max_time_download: 2000
   products:
     - id: APOLLO_SV
     - id: BFO
@@ -17,9 +18,9 @@ import_group:
     - id: GAZ
       is_large: TRUE
     - id: IAO
-    - id: NCBITaxon
-      module_type: slme
-      module_type_slme: TOP
+#    - id: NCBITaxon
+#      module_type: slme
+#      module_type_slme: TOP
     - id: MRO
       module_type: slme
       module_type_slme: TOP
@@ -45,7 +46,7 @@ import_group:
 #    - id: ONTIE
 
 allow_equivalents: all
-robot_java_args: '-Xmx16G'
+robot_java_args: '-Xmx128G'
 
 documentation:
   documentation_system: mkdocs
