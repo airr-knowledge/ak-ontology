@@ -2,8 +2,9 @@ import pandas as pd
 import os
 import sys
 
-file_dir = 'ak-ontology/src/ontology/exports'
-save_file_dir = "/ak_data/ak-data-load/ontology"
+#file_dir = 'ak-ontology/src/ontology/exports'
+#save_file_dir = "/ak_data/ak-data-load/ontology"
+save_file_dir = "exports"
 
 # filename to be that needs to be converted from tsv to csv
 filename = f'{sys.argv[1]}'
@@ -13,8 +14,8 @@ ontology_term_filename = f'{table_name}.csv'
 term_parents_filename = f'{table_name}_parent.csv'
 print("====================================================================================")
 print(f'Now processing: {filename} for {table_name} and {table_name}_parent table.')
-tsv_path = os.path.join(file_dir, filename)
-df = pd.read_csv(tsv_path, sep = '\t', dtype=str)
+#tsv_path = os.path.join(file_dir, filename)
+df = pd.read_csv(filename, sep = '\t', dtype=str)
 #set column names based on the keys of the table
 df.columns = ["term_id", "term_label", "parent_term_id"]
 df["parent_term_id"] = df["parent_term_id"].fillna(df["term_id"])
