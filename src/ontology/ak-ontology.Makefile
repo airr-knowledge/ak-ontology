@@ -7,7 +7,7 @@ clean_exports:
 	rm -rf exports
 
 #all_exports: exports/CL.tsv exports/DOID.tsv exports/PATO.tsv exports/UO.tsv exports/UBERON.tsv exports/OBI.tsv exports/MRO.tsv exports/NCBITaxon.tsv
-all_exports: exports/Cells.csv exports/Diseases.csv exports/PhenotypeAndTraits.csv exports/Units.csv exports/UberAnatomy.csv 
+all_exports: exports/BiomedicalInvestigations.csv exports/Cells.csv exports/Diseases.csv exports/PhenotypeAndTraits.csv exports/Units.csv exports/UberAnatomy.csv
 
 exports/:
 	mkdir -p $@
@@ -78,17 +78,13 @@ exports/UberAnatomy.csv exports/UberAnatomy_parent.csv: exports/UBERON.tsv
 	python3 ../scripts/ontology_table_transform.py exports/UBERON.tsv UberAnatomy
 
 exports/OBI.tsv: imports/OBI_import.owl | exports/
-	$(ROBOT) extract \
+	$(ROBOT) export \
 	--input $< \
-	--method MIREOT \
-	--branch-from-term BFO:0000001 \
-	export \
 	--header 'ID|Label|SubClassOf [ID]' \
 	--sort ID \
 	--export $@
 
-
-exports/BiomedicalInvestigations.csv exports/BiomedicalInvestigations_parents.csv:
+exports/BiomedicalInvestigations.csv exports/BiomedicalInvestigations_parents.csv: exports/OBI.tsv
 	python3 ../scripts/ontology_table_transform.py exports/OBI.tsv BiomedicalInvestigations
 
 exports/MRO.tsv: imports/MRO_import.owl | exports/
