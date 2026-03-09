@@ -27,6 +27,7 @@ These are the current imports in AK-ONTOLOGY
 | OBI | http://purl.obolibrary.org/obo/OBI.owl | slme |
 | OGMS | http://purl.obolibrary.org/obo/OGMS.owl | None |
 | OMRSE | http://purl.obolibrary.org/obo/OMRSE.owl | None |
+| ONTIE | https://ontology.iedb.org/file/ontie.owl | None |
 | PATO | http://purl.obolibrary.org/obo/PATO.owl | slme |
 | RO | http://purl.obolibrary.org/obo/RO.owl | None |
 | SBO | http://purl.obolibrary.org/obo/SBO.owl | None |

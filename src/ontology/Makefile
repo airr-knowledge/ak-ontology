@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                9a2eff31d82876b471b2e56a1820263e05efa1b588db8a6aae66a40e4fce7c78
+CONFIG_HASH=                4bf369432e21d367f718084970c7a3b0a74f4f291ae31790484ea4a8d70555b4
 
 
 # ----------------------------------------
@@ -159,7 +159,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  APOLLO_SV BFO CL DOID EXO GAZ IAO MRO OBI OGMS OMRSE PATO RO SBO UBERON UO VO
+IMPORTS =  APOLLO_SV BFO CL DOID EXO GAZ IAO MRO OBI OGMS OMRSE ONTIE PATO RO SBO UBERON UO VO
 
 IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -550,6 +550,13 @@ mirror-OGMS: | $(TMPDIR)
 mirror-OMRSE: | $(TMPDIR)
 	curl -L $(OBOBASE)/OMRSE.owl --create-dirs -o $(TMPDIR)/OMRSE-download.owl --retry 4 --max-time 2000 && \
 	$(ROBOT) convert -i $(TMPDIR)/OMRSE-download.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: ONTIE
+.PHONY: mirror-ONTIE
+.PRECIOUS: $(MIRRORDIR)/ONTIE.owl
+mirror-ONTIE: | $(TMPDIR)
+	$(ROBOT) convert -I https://ontology.iedb.org/file/ontie.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: PATO
