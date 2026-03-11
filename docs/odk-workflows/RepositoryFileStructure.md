@@ -16,18 +16,17 @@ These are the current imports in AK-ONTOLOGY
 
 | Import | URL | Type |
 | ------ | --- | ---- |
+| ONTIE | https://ontology.iedb.org/file/ontie.owl | slme |
 | APOLLO_SV | http://purl.obolibrary.org/obo/APOLLO_SV.owl | None |
 | BFO | http://purl.obolibrary.org/obo/BFO.owl | None |
 | CL | http://purl.obolibrary.org/obo/CL.owl | slme |
 | DOID | http://purl.obolibrary.org/obo/DOID.owl | slme |
 | EXO | http://purl.obolibrary.org/obo/EXO.owl | None |
-| GAZ | http://purl.obolibrary.org/obo/GAZ.owl | None |
 | IAO | http://purl.obolibrary.org/obo/IAO.owl | None |
 | MRO | http://purl.obolibrary.org/obo/MRO.owl | slme |
 | OBI | http://purl.obolibrary.org/obo/OBI.owl | slme |
 | OGMS | http://purl.obolibrary.org/obo/OGMS.owl | None |
 | OMRSE | http://purl.obolibrary.org/obo/OMRSE.owl | None |
-| ONTIE | https://ontology.iedb.org/file/ontie.owl | None |
 | PATO | http://purl.obolibrary.org/obo/PATO.owl | slme |
 | RO | http://purl.obolibrary.org/obo/RO.owl | None |
 | SBO | http://purl.obolibrary.org/obo/SBO.owl | None |

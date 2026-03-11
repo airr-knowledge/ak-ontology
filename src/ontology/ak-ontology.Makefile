@@ -7,7 +7,7 @@ clean_exports:
 	rm -rf exports
 
 #all_exports: exports/CL.tsv exports/DOID.tsv exports/PATO.tsv exports/UO.tsv exports/UBERON.tsv exports/OBI.tsv exports/MRO.tsv exports/NCBITaxon.tsv
-all_exports: exports/BiomedicalInvestigations.csv exports/Cells.csv exports/Diseases.csv exports/PhenotypeAndTraits.csv exports/Units.csv exports/UberAnatomy.csv
+all_exports: exports/ONTIE_Diseases.csv exports/BiomedicalInvestigations.csv exports/Cells.csv exports/Diseases.csv exports/PhenotypeAndTraits.csv exports/Units.csv exports/UberAnatomy.csv
 
 exports/:
 	mkdir -p $@
@@ -92,6 +92,20 @@ exports/OBI.tsv: imports/OBI_import.owl | exports/
 
 exports/BiomedicalInvestigations.csv exports/BiomedicalInvestigations_parents.csv: exports/OBI.tsv
 	python3 ../scripts/ontology_table_transform.py exports/OBI.tsv BiomedicalInvestigations
+
+exports/ONTIE.tsv: mirror/ONTIE.owl | exports/
+	$(ROBOT) extract \
+	--input $< \
+	--method MIREOT \
+	--branch-from-term https://ontology.iedb.org/ontology/ONTIE_0003543 \
+	export \
+	--header 'ID|Label|SubClassOf [ID]' \
+	--entity-select NAMED \
+	--sort ID \
+	--export $@
+
+exports/ONTIE_Diseases.csv exports/ONTIE_Diseases_parent.csv: exports/ONTIE.tsv
+	python3 ../scripts/ontology_table_transform.py exports/ONTIE.tsv ONTIE_Diseases
 
 exports/MRO.tsv: imports/MRO_import.owl | exports/
 	$(ROBOT) extract \

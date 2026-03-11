@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                4bf369432e21d367f718084970c7a3b0a74f4f291ae31790484ea4a8d70555b4
+CONFIG_HASH=                0d32bb0aa25c0607e9beee3d71b26cc4ed3c7b78af42d97a9c01625eff264631
 
 
 # ----------------------------------------
@@ -159,7 +159,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  APOLLO_SV BFO CL DOID EXO GAZ IAO MRO OBI OGMS OMRSE ONTIE PATO RO SBO UBERON UO VO
+IMPORTS =  ONTIE APOLLO_SV BFO CL DOID EXO IAO MRO OBI OGMS OMRSE PATO RO SBO UBERON UO VO
 
 IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -364,6 +364,14 @@ $(IMPORTDIR)/%_import.owl: $(MIRRORDIR)/%.owl $(IMPORTDIR)/%_terms_combined.txt
 
 .PRECIOUS: $(IMPORTDIR)/%_import.owl
 
+## Module for ontology: ONTIE
+
+$(IMPORTDIR)/ONTIE_import.owl: $(MIRRORDIR)/ONTIE.owl $(IMPORTDIR)/ONTIE_terms_combined.txt
+	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
+		extract -T $(IMPORTDIR)/ONTIE_terms_combined.txt --copy-ontology-annotations true --force true --individuals include --method TOP \
+		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
+		$(ANNOTATE_CONVERT_FILE); fi
+
 ## Module for ontology: CL
 
 $(IMPORTDIR)/CL_import.owl: $(MIRRORDIR)/CL.owl $(IMPORTDIR)/CL_terms_combined.txt
@@ -377,13 +385,6 @@ $(IMPORTDIR)/CL_import.owl: $(MIRRORDIR)/CL.owl $(IMPORTDIR)/CL_terms_combined.t
 $(IMPORTDIR)/DOID_import.owl: $(MIRRORDIR)/DOID.owl $(IMPORTDIR)/DOID_terms_combined.txt
 	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
 		extract -T $(IMPORTDIR)/DOID_terms_combined.txt --copy-ontology-annotations true --force true --individuals include --method TOP \
-		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
-		$(ANNOTATE_CONVERT_FILE); fi
-
-## Module for ontology: GAZ
-
-$(IMPORTDIR)/GAZ_import.owl: $(MIRRORDIR)/GAZ.owl $(IMPORTDIR)/GAZ_terms_combined.txt
-	if [ $(IMP) = true ] && [ $(IMP_LARGE) = true ]; then $(ROBOT) extract -i $< -T $(IMPORTDIR)/GAZ_terms_combined.txt --force true  --copy-ontology-annotations true --individuals include --method BOT \
 		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
 		$(ANNOTATE_CONVERT_FILE); fi
 
@@ -459,6 +460,13 @@ IMP_LARGE=true # Global parameter to bypass handling of large imports
 ifeq ($(strip $(MIR)),true)
 
 
+## ONTOLOGY: ONTIE
+.PHONY: mirror-ONTIE
+.PRECIOUS: $(MIRRORDIR)/ONTIE.owl
+mirror-ONTIE: | $(TMPDIR)
+	$(ROBOT) convert -I https://ontology.iedb.org/file/ontie.owl -o $(TMPDIR)/$@.owl
+
+
 ## ONTOLOGY: APOLLO_SV
 .PHONY: mirror-APOLLO_SV
 .PRECIOUS: $(MIRRORDIR)/APOLLO_SV.owl
@@ -499,19 +507,6 @@ mirror-EXO: | $(TMPDIR)
 	$(ROBOT) convert -i $(TMPDIR)/EXO-download.owl -o $(TMPDIR)/$@.owl
 
 
-## ONTOLOGY: GAZ
-.PHONY: mirror-GAZ
-.PRECIOUS: $(MIRRORDIR)/GAZ.owl
-ifeq ($(strip $(IMP_LARGE)),true)
-mirror-GAZ: | $(TMPDIR)
-	curl -L $(OBOBASE)/GAZ.owl --create-dirs -o $(TMPDIR)/GAZ-download.owl --retry 4 --max-time 2000 && \
-	$(ROBOT) convert -i $(TMPDIR)/GAZ-download.owl -o $(TMPDIR)/$@.owl
-else
-mirror-GAZ:
-	@echo "Not refreshing GAZ because refreshing large imports is disabled (IMP_LARGE=$(IMP_LARGE))."
-endif
-
-
 ## ONTOLOGY: IAO
 .PHONY: mirror-IAO
 .PRECIOUS: $(MIRRORDIR)/IAO.owl
@@ -550,13 +545,6 @@ mirror-OGMS: | $(TMPDIR)
 mirror-OMRSE: | $(TMPDIR)
 	curl -L $(OBOBASE)/OMRSE.owl --create-dirs -o $(TMPDIR)/OMRSE-download.owl --retry 4 --max-time 2000 && \
 	$(ROBOT) convert -i $(TMPDIR)/OMRSE-download.owl -o $(TMPDIR)/$@.owl
-
-
-## ONTOLOGY: ONTIE
-.PHONY: mirror-ONTIE
-.PRECIOUS: $(MIRRORDIR)/ONTIE.owl
-mirror-ONTIE: | $(TMPDIR)
-	$(ROBOT) convert -I https://ontology.iedb.org/file/ontie.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: PATO
