@@ -33,12 +33,16 @@ df = pd.read_csv(filename, sep = '\t', dtype=str)
 #set column names based on the keys of the table
 df.columns = ["term_id", "term_label", "parent_term_id"]
 df["parent_term_id"] = df["parent_term_id"].fillna(df["term_id"])
-df["term_id"] = df["term_id"].str.replace('https://ontology.iedb.org/ontology/','').replace('_',':')
-df["term_id"] = df["term_id"].str.replace('_',':')
 
 # this is horrible and restricted to ONTIE
+df["term_id"] = df["term_id"].str.replace('https://ontology.iedb.org/ontology/','').replace('_',':')
+df["term_id"] = df["term_id"].str.replace('_',':')
 df["parent_term_id"] = df["parent_term_id"].str.replace('https://ontology.iedb.org/ontology/','').replace('_',':')
 df["parent_term_id"] = df["parent_term_id"].str.replace('_',':')
+
+# uppercase for all, needed by NCBITaxon
+df["term_id"] = df["term_id"].str.upper()
+df["parent_term_id"] = df["parent_term_id"].str.upper()
 
 # get only ontology terms and their label
 ontology_term = df[["term_id", "term_label"]]

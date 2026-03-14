@@ -7,7 +7,7 @@ clean_exports:
 	rm -rf exports
 
 #all_exports: exports/CL.tsv exports/DOID.tsv exports/PATO.tsv exports/UO.tsv exports/UBERON.tsv exports/OBI.tsv exports/MRO.tsv exports/NCBITaxon.tsv
-all_exports: exports/ONTIE_Diseases.csv exports/BiomedicalInvestigations.csv exports/Cells.csv exports/Diseases.csv exports/PhenotypeAndTraits.csv exports/Units.csv exports/UberAnatomy.csv
+all_exports: exports/ONTIE_organisms.csv exports/TaxonomicSpecies.csv exports/ONTIE_Diseases.csv exports/BiomedicalInvestigations.csv exports/Cells.csv exports/Diseases.csv exports/PhenotypeAndTraits.csv exports/Units.csv exports/UberAnatomy.csv
 
 exports/:
 	mkdir -p $@
@@ -119,14 +119,37 @@ exports/MRO.tsv: imports/MRO_import.owl | exports/
 	--export $@
 	python3 ../scripts/ontology_table_transform.py exports/MRO.tsv TODO
 
-exports/NCBITaxon.tsv: imports/NCBITaxon_import.owl | exports/
+# BUG: Handle NCBITaxon manually right now
+.PHONY: mirror-NCBITaxon
+.PRECIOUS: $(MIRRORDIR)/NCBITaxon.owl
+mirror-NCBITaxon: | $(TMPDIR)
+	curl -L $(OBOBASE)/NCBITaxon.owl --create-dirs -o $(TMPDIR)/NCBITaxon-download.owl --retry 4 --max-time 2000 && \
+	$(ROBOT) convert -i $(TMPDIR)/NCBITaxon-download.owl -o $(TMPDIR)/$@.owl
+
+exports/NCBITaxon.tsv: mirror/NCBITaxon.owl | exports/
 	$(ROBOT) extract \
 	--input $< \
 	--method MIREOT \
-	--branch-from-term NCBITaxon:131567 \
+	--branch-from-term NCBITaxon:1 \
 	export \
 	--header 'ID|Label|SubClassOf [ID]' \
 	--entity-select NAMED \
 	--sort ID \
 	--export $@
-	python3 ../scripts/ontology_table_transform.py exports/NCBITaxon.tsv TODO
+
+exports/TaxonomicSpecies.csv exports/TaxonomicSpecies_parent.csv: exports/NCBITaxon.tsv
+	python3 ../scripts/ontology_table_transform.py exports/NCBITaxon.tsv TaxonomicSpecies
+
+exports/ONTIE_organisms.tsv: mirror/ONTIE.owl | exports/
+	$(ROBOT) extract \
+	--input $< \
+	--method MIREOT \
+	--branch-from-term http://purl.obolibrary.org/obo/OBI_0100026 \
+	export \
+	--header 'ID|Label|SubClassOf [ID]' \
+	--entity-select NAMED \
+	--sort ID \
+	--export $@
+
+exports/ONTIE_organisms.csv exports/ONTIE_organisms_parent.csv: exports/ONTIE_organisms.tsv
+	python3 ../scripts/ontology_table_transform.py exports/ONTIE_organisms.tsv ONTIE_organisms
