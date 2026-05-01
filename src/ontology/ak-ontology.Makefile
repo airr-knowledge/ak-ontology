@@ -7,7 +7,7 @@ clean_exports:
 	rm -rf exports
 
 #all_exports: exports/CL.tsv exports/DOID.tsv exports/PATO.tsv exports/UO.tsv exports/UBERON.tsv exports/OBI.tsv exports/MRO.tsv exports/NCBITaxon.tsv
-all_exports: exports/ONTIE_organisms.csv exports/TaxonomicSpecies.csv exports/ONTIE_Diseases.csv exports/BiomedicalInvestigations.csv exports/Cells.csv exports/Diseases.csv exports/PhenotypeAndTraits.csv exports/Units.csv exports/UberAnatomy.csv
+all_exports: exports/MHCRestriction.csv exports/ONTIE_organisms.csv exports/TaxonomicSpecies.csv exports/ONTIE_Diseases.csv exports/BiomedicalInvestigations.csv exports/Cells.csv exports/Diseases.csv exports/PhenotypeAndTraits.csv exports/Units.csv exports/UberAnatomy.csv
 
 exports/:
 	mkdir -p $@
@@ -117,7 +117,9 @@ exports/MRO.tsv: imports/MRO_import.owl | exports/
 	--entity-select NAMED \
 	--sort ID \
 	--export $@
-	python3 ../scripts/ontology_table_transform.py exports/MRO.tsv TODO
+
+exports/MHCRestriction.csv exports/MHCRestriction_parent.csv: exports/MRO.tsv
+	python3 ../scripts/ontology_table_transform.py exports/MRO.tsv MHCRestriction
 
 # BUG: Handle NCBITaxon manually right now
 .PHONY: mirror-NCBITaxon
